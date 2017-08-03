@@ -1,0 +1,8 @@
+2017-05-01 00:46:09,810 Clustering Application [INFO] *****Clustering Application*****
+2017-05-01 00:46:10,330 Clustering [INFO] Generating document embeddings matrix
+2017-05-01 00:46:11,095 Clustering [INFO] Clustering document embeddings
+2017-05-01 00:46:11,096 Clustering [INFO] Clustering command: /users/cborse/patent2vec/bin/cluto-2.1.2/Linux-x86_64/vcluster -clmethod=rbr -sim=cos -crfun=i2 -cstype=best -rowmodel=none -colmodel=none -ntrials=10 -niter=20 -clustfile=/users/cborse/patent2vec/output/clusters/PatentCluster -rlabelfile=/users/cborse/patent2vec/output/clusters/PatentEmbedding.rlabel -rclassfile=/users/cborse/patent2vec/output/clusters/PatentEmbedding.rclass -showsummaries=cliques -plotformat=ps -plotclusters=/users/cborse/patent2vec/output/clusters/PatentCluster.ps /users/cborse/patent2vec/output/clusters/PatentEmbedding.mat 20
+2017-05-01 00:46:11,096 Clustering [INFO] START 2017-05-01 00:46:11.096935
+2017-05-01 00:46:34,576 Clustering [INFO] END 2017-05-01 00:46:34.576348
+2017-05-01 00:46:34,578 Cleanup [INFO] Removed: /users/cborse/patent2vec/output/clusters/PatentEmbedding.mat
+2017-05-01 00:46:34,588 Cleanup [INFO] Removed: /users/cborse/patent2vec/output/clusters/PatentEmbedding.rlabel

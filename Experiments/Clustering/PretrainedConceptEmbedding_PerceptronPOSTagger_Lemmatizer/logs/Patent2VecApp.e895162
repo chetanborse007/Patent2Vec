@@ -1,0 +1,1424 @@
+2017-05-01 01:52:36,554 summa.preprocessing.cleaner [INFO] 'pattern' package not found; tag filters are not available for English
+2017-05-01 01:52:36,618 Patent2Vec Application [INFO] *****Patent2Vec Application*****
+2017-05-01 01:52:36,618 Patent2Vec Application [INFO] Preprocessing patent documents
+2017-05-01 01:52:36,826 PatentDocument [INFO] Loading conceptualizer model: w2v-plain-anno-titles-4.4-10iter-dim500-wind9-cnt1-skipgram1.bin
+2017-05-01 02:15:02,092 Patent2Vec [INFO] Building Patent2Vec model
+2017-05-01 02:21:57,481 gensim.models.doc2vec [INFO] collecting all words and their counts
+2017-05-01 02:21:57,481 gensim.models.doc2vec [INFO] PROGRESS: at example #0, processed 0 words (0/s), 0 word types, 0 tags
+2017-05-01 02:21:57,766 gensim.models.doc2vec [INFO] PROGRESS: at example #10000, processed 1391906 words (4883302/s), 130087 word types, 10000 tags
+2017-05-01 02:21:58,133 gensim.models.doc2vec [INFO] collected 200371 word types and 19997 unique tags from a corpus of 19997 examples and 3095213 words
+2017-05-01 02:21:58,133 gensim.models.word2vec [INFO] Loading a fresh vocabulary
+2017-05-01 02:22:01,386 gensim.models.word2vec [INFO] min_count=5 retains 42353 unique words (21% of original 200371, drops 158018)
+2017-05-01 02:22:01,386 gensim.models.word2vec [INFO] min_count=5 leaves 2851473 word corpus (92% of original 3095213, drops 243740)
+2017-05-01 02:22:01,486 gensim.models.word2vec [INFO] deleting the raw counts dictionary of 200371 items
+2017-05-01 02:22:01,493 gensim.models.word2vec [INFO] sample=1e-05 downsamples 5010 most-common words
+2017-05-01 02:22:01,493 gensim.models.word2vec [INFO] downsampling leaves estimated 1207352 word corpus (42.3% of prior 2851473)
+2017-05-01 02:22:01,493 gensim.models.word2vec [INFO] estimated required memory for 42353 words and 500 dimensions: 234581900 bytes
+2017-05-01 02:22:01,623 gensim.models.word2vec [INFO] resetting layer weights
+2017-05-01 02:22:02,932 Patent2Vec [INFO] Intersecting vocabulary with pre-trained word/concept embeddings
+2017-05-01 02:22:02,932 gensim.models.word2vec [INFO] loading projection weights from /users/cborse/patent2vec/data/pretrained_embedding/w2v-plain-anno-titles-4.4-10iter-dim500-wind9-cnt1-skipgram1.vec
+2017-05-01 03:53:38,456 gensim.models.word2vec [INFO] merged 39594 vectors into (42353, 500) matrix from /users/cborse/patent2vec/data/pretrained_embedding/w2v-plain-anno-titles-4.4-10iter-dim500-wind9-cnt1-skipgram1.vec
+2017-05-01 03:53:38,457 Patent2Vec [INFO] Training Patent2Vec model
+2017-05-01 03:53:38,495 Patent2Vec [INFO] START 2017-05-01 03:53:38.495350
+2017-05-01 03:53:38,515 gensim.models.word2vec [INFO] training model with 16 workers on 42353 vocabulary and 500 features, using sg=0 hs=0 sample=1e-05 negative=2 window=8
+2017-05-01 03:53:38,570 gensim.models.word2vec [WARNING] Effective 'alpha' higher than previous training cycles
+2017-05-01 03:53:39,570 gensim.models.word2vec [INFO] PROGRESS: at 0.61% examples, 370806 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:53:40,573 gensim.models.word2vec [INFO] PROGRESS: at 1.40% examples, 393535 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:53:41,583 gensim.models.word2vec [INFO] PROGRESS: at 2.02% examples, 412242 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:53:42,588 gensim.models.word2vec [INFO] PROGRESS: at 2.83% examples, 420946 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:53:43,739 gensim.models.word2vec [INFO] PROGRESS: at 3.55% examples, 407702 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:53:44,748 gensim.models.word2vec [INFO] PROGRESS: at 4.15% examples, 416897 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:53:45,758 gensim.models.word2vec [INFO] PROGRESS: at 5.02% examples, 420065 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:53:46,761 gensim.models.word2vec [INFO] PROGRESS: at 5.74% examples, 424342 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:53:47,762 gensim.models.word2vec [INFO] PROGRESS: at 6.39% examples, 430524 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:53:48,763 gensim.models.word2vec [INFO] PROGRESS: at 7.27% examples, 430530 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:53:49,765 gensim.models.word2vec [INFO] PROGRESS: at 8.01% examples, 439466 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:53:50,768 gensim.models.word2vec [INFO] PROGRESS: at 8.94% examples, 444919 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:53:51,782 gensim.models.word2vec [INFO] PROGRESS: at 9.73% examples, 448505 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:53:52,791 gensim.models.word2vec [INFO] PROGRESS: at 10.50% examples, 454410 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:53:53,793 gensim.models.word2vec [INFO] PROGRESS: at 11.46% examples, 457317 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:53:54,796 gensim.models.word2vec [INFO] PROGRESS: at 12.17% examples, 462525 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:53:55,805 gensim.models.word2vec [INFO] PROGRESS: at 13.15% examples, 464816 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:53:56,818 gensim.models.word2vec [INFO] PROGRESS: at 13.92% examples, 467876 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:53:57,821 gensim.models.word2vec [INFO] PROGRESS: at 14.83% examples, 470052 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:53:58,826 gensim.models.word2vec [INFO] PROGRESS: at 15.67% examples, 471962 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:53:59,830 gensim.models.word2vec [INFO] PROGRESS: at 16.44% examples, 475606 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:00,830 gensim.models.word2vec [INFO] PROGRESS: at 17.40% examples, 476491 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:01,833 gensim.models.word2vec [INFO] PROGRESS: at 18.14% examples, 479460 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:02,841 gensim.models.word2vec [INFO] PROGRESS: at 19.08% examples, 480211 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:03,846 gensim.models.word2vec [INFO] PROGRESS: at 19.83% examples, 481203 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:04,856 gensim.models.word2vec [INFO] PROGRESS: at 20.76% examples, 483266 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:05,859 gensim.models.word2vec [INFO] PROGRESS: at 21.64% examples, 484393 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:06,861 gensim.models.word2vec [INFO] PROGRESS: at 22.37% examples, 486305 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:07,870 gensim.models.word2vec [INFO] PROGRESS: at 23.36% examples, 486624 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:08,877 gensim.models.word2vec [INFO] PROGRESS: at 24.09% examples, 487908 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:09,879 gensim.models.word2vec [INFO] PROGRESS: at 25.01% examples, 488291 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:10,882 gensim.models.word2vec [INFO] PROGRESS: at 25.80% examples, 489316 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:11,897 gensim.models.word2vec [INFO] PROGRESS: at 26.60% examples, 489864 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:12,900 gensim.models.word2vec [INFO] PROGRESS: at 27.54% examples, 490060 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:13,906 gensim.models.word2vec [INFO] PROGRESS: at 28.22% examples, 491649 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:14,930 gensim.models.word2vec [INFO] PROGRESS: at 29.18% examples, 490811 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:15,933 gensim.models.word2vec [INFO] PROGRESS: at 29.92% examples, 491433 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:16,939 gensim.models.word2vec [INFO] PROGRESS: at 30.84% examples, 492011 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:17,943 gensim.models.word2vec [INFO] PROGRESS: at 31.66% examples, 492240 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:18,948 gensim.models.word2vec [INFO] PROGRESS: at 32.43% examples, 493531 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:19,966 gensim.models.word2vec [INFO] PROGRESS: at 33.39% examples, 493229 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:20,974 gensim.models.word2vec [INFO] PROGRESS: at 34.15% examples, 494685 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:21,985 gensim.models.word2vec [INFO] PROGRESS: at 35.13% examples, 495231 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:23,016 gensim.models.word2vec [INFO] PROGRESS: at 35.91% examples, 495854 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:24,041 gensim.models.word2vec [INFO] PROGRESS: at 36.80% examples, 495658 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:25,049 gensim.models.word2vec [INFO] PROGRESS: at 37.64% examples, 495748 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:26,055 gensim.models.word2vec [INFO] PROGRESS: at 38.40% examples, 496913 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:27,068 gensim.models.word2vec [INFO] PROGRESS: at 39.37% examples, 496655 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:28,071 gensim.models.word2vec [INFO] PROGRESS: at 40.10% examples, 497576 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:29,078 gensim.models.word2vec [INFO] PROGRESS: at 41.05% examples, 497557 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:30,085 gensim.models.word2vec [INFO] PROGRESS: at 41.78% examples, 497170 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:31,099 gensim.models.word2vec [INFO] PROGRESS: at 42.59% examples, 497540 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:32,110 gensim.models.word2vec [INFO] PROGRESS: at 43.49% examples, 497040 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:33,115 gensim.models.word2vec [INFO] PROGRESS: at 44.23% examples, 498562 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:34,132 gensim.models.word2vec [INFO] PROGRESS: at 45.20% examples, 498099 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:35,134 gensim.models.word2vec [INFO] PROGRESS: at 45.96% examples, 498647 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:36,143 gensim.models.word2vec [INFO] PROGRESS: at 46.90% examples, 498847 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:37,150 gensim.models.word2vec [INFO] PROGRESS: at 47.72% examples, 499095 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:38,158 gensim.models.word2vec [INFO] PROGRESS: at 48.52% examples, 499845 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:39,167 gensim.models.word2vec [INFO] PROGRESS: at 49.48% examples, 499841 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:40,168 gensim.models.word2vec [INFO] PROGRESS: at 50.17% examples, 500402 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:41,170 gensim.models.word2vec [INFO] PROGRESS: at 51.14% examples, 500351 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:42,172 gensim.models.word2vec [INFO] PROGRESS: at 51.90% examples, 500693 words/s, in_qsize 30, out_qsize 1
+2017-05-01 03:54:43,178 gensim.models.word2vec [INFO] PROGRESS: at 52.79% examples, 500724 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:44,180 gensim.models.word2vec [INFO] PROGRESS: at 53.52% examples, 499392 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:45,185 gensim.models.word2vec [INFO] PROGRESS: at 54.23% examples, 500329 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:46,205 gensim.models.word2vec [INFO] PROGRESS: at 55.21% examples, 499963 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:47,213 gensim.models.word2vec [INFO] PROGRESS: at 55.94% examples, 500065 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:48,215 gensim.models.word2vec [INFO] PROGRESS: at 56.85% examples, 500173 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:49,216 gensim.models.word2vec [INFO] PROGRESS: at 57.55% examples, 498858 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:50,238 gensim.models.word2vec [INFO] PROGRESS: at 58.23% examples, 499341 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:51,251 gensim.models.word2vec [INFO] PROGRESS: at 59.21% examples, 499077 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:52,255 gensim.models.word2vec [INFO] PROGRESS: at 60.00% examples, 499663 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:53,256 gensim.models.word2vec [INFO] PROGRESS: at 60.92% examples, 499669 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:54,256 gensim.models.word2vec [INFO] PROGRESS: at 61.73% examples, 499900 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:55,260 gensim.models.word2vec [INFO] PROGRESS: at 62.52% examples, 500404 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:56,302 gensim.models.word2vec [INFO] PROGRESS: at 63.49% examples, 500224 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:57,305 gensim.models.word2vec [INFO] PROGRESS: at 64.18% examples, 500794 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:54:58,322 gensim.models.word2vec [INFO] PROGRESS: at 65.17% examples, 500748 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:54:59,330 gensim.models.word2vec [INFO] PROGRESS: at 65.93% examples, 500921 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:00,330 gensim.models.word2vec [INFO] PROGRESS: at 66.87% examples, 501219 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:01,342 gensim.models.word2vec [INFO] PROGRESS: at 67.70% examples, 501310 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:02,344 gensim.models.word2vec [INFO] PROGRESS: at 68.50% examples, 501951 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:03,344 gensim.models.word2vec [INFO] PROGRESS: at 69.46% examples, 501920 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:04,348 gensim.models.word2vec [INFO] PROGRESS: at 70.16% examples, 502431 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:05,350 gensim.models.word2vec [INFO] PROGRESS: at 71.16% examples, 502538 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:06,367 gensim.models.word2vec [INFO] PROGRESS: at 71.93% examples, 502722 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:07,376 gensim.models.word2vec [INFO] PROGRESS: at 72.89% examples, 503017 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:08,379 gensim.models.word2vec [INFO] PROGRESS: at 73.73% examples, 503286 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:09,380 gensim.models.word2vec [INFO] PROGRESS: at 74.54% examples, 503868 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:10,402 gensim.models.word2vec [INFO] PROGRESS: at 75.49% examples, 503612 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:11,410 gensim.models.word2vec [INFO] PROGRESS: at 76.23% examples, 504433 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:12,413 gensim.models.word2vec [INFO] PROGRESS: at 77.20% examples, 504163 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:13,422 gensim.models.word2vec [INFO] PROGRESS: at 77.93% examples, 504180 words/s, in_qsize 30, out_qsize 1
+2017-05-01 03:55:14,433 gensim.models.word2vec [INFO] PROGRESS: at 78.90% examples, 504428 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:15,445 gensim.models.word2vec [INFO] PROGRESS: at 79.73% examples, 504540 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:16,447 gensim.models.word2vec [INFO] PROGRESS: at 80.53% examples, 505022 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:17,448 gensim.models.word2vec [INFO] PROGRESS: at 81.48% examples, 504929 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:18,448 gensim.models.word2vec [INFO] PROGRESS: at 82.17% examples, 505270 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:19,452 gensim.models.word2vec [INFO] PROGRESS: at 83.10% examples, 504953 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:20,455 gensim.models.word2vec [INFO] PROGRESS: at 83.86% examples, 505043 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:21,456 gensim.models.word2vec [INFO] PROGRESS: at 84.77% examples, 505231 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:22,504 gensim.models.word2vec [INFO] PROGRESS: at 85.65% examples, 505100 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:23,514 gensim.models.word2vec [INFO] PROGRESS: at 86.39% examples, 505406 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:24,534 gensim.models.word2vec [INFO] PROGRESS: at 87.37% examples, 505287 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:25,540 gensim.models.word2vec [INFO] PROGRESS: at 88.10% examples, 505624 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:26,541 gensim.models.word2vec [INFO] PROGRESS: at 89.07% examples, 505691 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:27,548 gensim.models.word2vec [INFO] PROGRESS: at 89.83% examples, 505792 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:28,559 gensim.models.word2vec [INFO] PROGRESS: at 90.76% examples, 506052 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:29,561 gensim.models.word2vec [INFO] PROGRESS: at 91.61% examples, 505932 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:30,561 gensim.models.word2vec [INFO] PROGRESS: at 92.32% examples, 506204 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:31,567 gensim.models.word2vec [INFO] PROGRESS: at 93.29% examples, 505992 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:32,574 gensim.models.word2vec [INFO] PROGRESS: at 94.03% examples, 506199 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:33,579 gensim.models.word2vec [INFO] PROGRESS: at 95.01% examples, 506439 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:34,586 gensim.models.word2vec [INFO] PROGRESS: at 95.81% examples, 506651 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:35,586 gensim.models.word2vec [INFO] PROGRESS: at 96.66% examples, 506790 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:36,586 gensim.models.word2vec [INFO] PROGRESS: at 97.58% examples, 506823 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:37,595 gensim.models.word2vec [INFO] PROGRESS: at 98.35% examples, 507320 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:38,598 gensim.models.word2vec [INFO] PROGRESS: at 99.33% examples, 507262 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:39,381 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 15 more threads
+2017-05-01 03:55:39,405 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 14 more threads
+2017-05-01 03:55:39,407 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 13 more threads
+2017-05-01 03:55:39,421 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 12 more threads
+2017-05-01 03:55:39,430 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 11 more threads
+2017-05-01 03:55:39,435 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 10 more threads
+2017-05-01 03:55:39,438 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 9 more threads
+2017-05-01 03:55:39,440 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 8 more threads
+2017-05-01 03:55:39,440 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 7 more threads
+2017-05-01 03:55:39,441 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 6 more threads
+2017-05-01 03:55:39,443 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 5 more threads
+2017-05-01 03:55:39,445 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 4 more threads
+2017-05-01 03:55:39,445 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 3 more threads
+2017-05-01 03:55:39,446 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 2 more threads
+2017-05-01 03:55:39,447 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 1 more threads
+2017-05-01 03:55:39,447 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 0 more threads
+2017-05-01 03:55:39,447 gensim.models.word2vec [INFO] training on 154760650 raw words (61366933 effective words) took 120.9s, 507680 effective words/s
+2017-05-01 03:55:39,449 gensim.models.word2vec [INFO] training model with 16 workers on 42353 vocabulary and 500 features, using sg=0 hs=0 sample=1e-05 negative=2 window=8
+2017-05-01 03:55:40,454 gensim.models.word2vec [INFO] PROGRESS: at 0.90% examples, 491946 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:41,454 gensim.models.word2vec [INFO] PROGRESS: at 1.74% examples, 512105 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:42,459 gensim.models.word2vec [INFO] PROGRESS: at 2.55% examples, 524839 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:43,472 gensim.models.word2vec [INFO] PROGRESS: at 3.49% examples, 514642 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:44,476 gensim.models.word2vec [INFO] PROGRESS: at 4.23% examples, 527548 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:45,481 gensim.models.word2vec [INFO] PROGRESS: at 5.18% examples, 517264 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:46,490 gensim.models.word2vec [INFO] PROGRESS: at 5.91% examples, 515769 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:47,498 gensim.models.word2vec [INFO] PROGRESS: at 6.82% examples, 514205 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:48,498 gensim.models.word2vec [INFO] PROGRESS: at 7.66% examples, 513488 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:49,499 gensim.models.word2vec [INFO] PROGRESS: at 8.16% examples, 500967 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:50,503 gensim.models.word2vec [INFO] PROGRESS: at 9.13% examples, 501504 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:51,504 gensim.models.word2vec [INFO] PROGRESS: at 9.89% examples, 503266 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:52,509 gensim.models.word2vec [INFO] PROGRESS: at 10.78% examples, 503513 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:53,540 gensim.models.word2vec [INFO] PROGRESS: at 11.65% examples, 503018 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:54,551 gensim.models.word2vec [INFO] PROGRESS: at 12.15% examples, 495169 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:55,551 gensim.models.word2vec [INFO] PROGRESS: at 13.11% examples, 496216 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:56,553 gensim.models.word2vec [INFO] PROGRESS: at 13.86% examples, 497319 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:57,555 gensim.models.word2vec [INFO] PROGRESS: at 14.76% examples, 498334 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:55:58,558 gensim.models.word2vec [INFO] PROGRESS: at 15.60% examples, 497428 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:55:59,558 gensim.models.word2vec [INFO] PROGRESS: at 16.29% examples, 499174 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:00,562 gensim.models.word2vec [INFO] PROGRESS: at 17.22% examples, 497671 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:01,565 gensim.models.word2vec [INFO] PROGRESS: at 18.01% examples, 500035 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:02,573 gensim.models.word2vec [INFO] PROGRESS: at 18.99% examples, 501356 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:03,590 gensim.models.word2vec [INFO] PROGRESS: at 19.80% examples, 502692 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:04,609 gensim.models.word2vec [INFO] PROGRESS: at 20.65% examples, 503286 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:05,617 gensim.models.word2vec [INFO] PROGRESS: at 21.58% examples, 503550 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:06,620 gensim.models.word2vec [INFO] PROGRESS: at 22.32% examples, 505540 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:07,631 gensim.models.word2vec [INFO] PROGRESS: at 23.30% examples, 504778 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:08,639 gensim.models.word2vec [INFO] PROGRESS: at 24.03% examples, 505455 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:09,643 gensim.models.word2vec [INFO] PROGRESS: at 25.00% examples, 506149 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:10,651 gensim.models.word2vec [INFO] PROGRESS: at 25.80% examples, 506925 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:11,652 gensim.models.word2vec [INFO] PROGRESS: at 26.64% examples, 507431 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:12,657 gensim.models.word2vec [INFO] PROGRESS: at 27.56% examples, 507242 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:13,659 gensim.models.word2vec [INFO] PROGRESS: at 28.25% examples, 508331 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:14,672 gensim.models.word2vec [INFO] PROGRESS: at 29.21% examples, 507191 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:15,674 gensim.models.word2vec [INFO] PROGRESS: at 29.96% examples, 507671 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:16,681 gensim.models.word2vec [INFO] PROGRESS: at 30.90% examples, 507747 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:17,683 gensim.models.word2vec [INFO] PROGRESS: at 31.72% examples, 507977 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:18,688 gensim.models.word2vec [INFO] PROGRESS: at 32.50% examples, 508844 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:19,688 gensim.models.word2vec [INFO] PROGRESS: at 33.46% examples, 508602 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:20,697 gensim.models.word2vec [INFO] PROGRESS: at 34.16% examples, 509112 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:21,700 gensim.models.word2vec [INFO] PROGRESS: at 35.13% examples, 508940 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:22,702 gensim.models.word2vec [INFO] PROGRESS: at 35.89% examples, 509263 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:23,705 gensim.models.word2vec [INFO] PROGRESS: at 36.79% examples, 509235 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:24,706 gensim.models.word2vec [INFO] PROGRESS: at 37.53% examples, 507227 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:25,708 gensim.models.word2vec [INFO] PROGRESS: at 38.19% examples, 507889 words/s, in_qsize 32, out_qsize 1
+2017-05-01 03:56:26,712 gensim.models.word2vec [INFO] PROGRESS: at 39.15% examples, 507178 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:27,718 gensim.models.word2vec [INFO] PROGRESS: at 39.86% examples, 506745 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:28,725 gensim.models.word2vec [INFO] PROGRESS: at 40.76% examples, 506951 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:29,761 gensim.models.word2vec [INFO] PROGRESS: at 41.64% examples, 506846 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:30,762 gensim.models.word2vec [INFO] PROGRESS: at 42.42% examples, 507925 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:31,771 gensim.models.word2vec [INFO] PROGRESS: at 43.38% examples, 507487 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:32,774 gensim.models.word2vec [INFO] PROGRESS: at 44.11% examples, 508132 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:33,786 gensim.models.word2vec [INFO] PROGRESS: at 45.10% examples, 508347 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:34,791 gensim.models.word2vec [INFO] PROGRESS: at 45.88% examples, 508792 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:35,795 gensim.models.word2vec [INFO] PROGRESS: at 46.79% examples, 508906 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:36,802 gensim.models.word2vec [INFO] PROGRESS: at 47.66% examples, 509091 words/s, in_qsize 32, out_qsize 1
+2017-05-01 03:56:37,802 gensim.models.word2vec [INFO] PROGRESS: at 48.48% examples, 510191 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:38,803 gensim.models.word2vec [INFO] PROGRESS: at 49.42% examples, 509893 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:39,806 gensim.models.word2vec [INFO] PROGRESS: at 50.16% examples, 510542 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:40,810 gensim.models.word2vec [INFO] PROGRESS: at 51.14% examples, 510522 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:41,840 gensim.models.word2vec [INFO] PROGRESS: at 51.93% examples, 510780 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:42,853 gensim.models.word2vec [INFO] PROGRESS: at 52.89% examples, 511037 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:43,860 gensim.models.word2vec [INFO] PROGRESS: at 53.73% examples, 511264 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:44,866 gensim.models.word2vec [INFO] PROGRESS: at 54.55% examples, 511972 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:45,873 gensim.models.word2vec [INFO] PROGRESS: at 55.49% examples, 511609 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:46,876 gensim.models.word2vec [INFO] PROGRESS: at 56.23% examples, 512630 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:47,889 gensim.models.word2vec [INFO] PROGRESS: at 57.22% examples, 512207 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:48,891 gensim.models.word2vec [INFO] PROGRESS: at 58.01% examples, 512757 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:49,895 gensim.models.word2vec [INFO] PROGRESS: at 58.99% examples, 513043 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:50,898 gensim.models.word2vec [INFO] PROGRESS: at 59.78% examples, 513139 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:51,904 gensim.models.word2vec [INFO] PROGRESS: at 60.52% examples, 512853 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:52,904 gensim.models.word2vec [INFO] PROGRESS: at 61.48% examples, 512676 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:53,907 gensim.models.word2vec [INFO] PROGRESS: at 62.18% examples, 513142 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:54,918 gensim.models.word2vec [INFO] PROGRESS: at 63.14% examples, 512688 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:55,931 gensim.models.word2vec [INFO] PROGRESS: at 63.92% examples, 512876 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:56,939 gensim.models.word2vec [INFO] PROGRESS: at 64.85% examples, 512961 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:57,941 gensim.models.word2vec [INFO] PROGRESS: at 65.71% examples, 513106 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:56:58,952 gensim.models.word2vec [INFO] PROGRESS: at 66.49% examples, 513537 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:56:59,966 gensim.models.word2vec [INFO] PROGRESS: at 67.38% examples, 512698 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:00,969 gensim.models.word2vec [INFO] PROGRESS: at 68.11% examples, 513012 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:01,972 gensim.models.word2vec [INFO] PROGRESS: at 69.07% examples, 512950 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:02,992 gensim.models.word2vec [INFO] PROGRESS: at 69.83% examples, 512918 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:03,998 gensim.models.word2vec [INFO] PROGRESS: at 70.76% examples, 513192 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:05,026 gensim.models.word2vec [INFO] PROGRESS: at 71.64% examples, 513107 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:06,042 gensim.models.word2vec [INFO] PROGRESS: at 72.44% examples, 513672 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:07,046 gensim.models.word2vec [INFO] PROGRESS: at 73.38% examples, 513286 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:08,053 gensim.models.word2vec [INFO] PROGRESS: at 74.11% examples, 513539 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:09,057 gensim.models.word2vec [INFO] PROGRESS: at 75.08% examples, 513608 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:10,059 gensim.models.word2vec [INFO] PROGRESS: at 75.87% examples, 513832 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:11,063 gensim.models.word2vec [INFO] PROGRESS: at 76.80% examples, 513967 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:12,069 gensim.models.word2vec [INFO] PROGRESS: at 77.66% examples, 513997 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:13,070 gensim.models.word2vec [INFO] PROGRESS: at 78.47% examples, 514582 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:14,071 gensim.models.word2vec [INFO] PROGRESS: at 79.42% examples, 514343 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:15,072 gensim.models.word2vec [INFO] PROGRESS: at 80.16% examples, 514761 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:16,075 gensim.models.word2vec [INFO] PROGRESS: at 81.08% examples, 514404 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:17,079 gensim.models.word2vec [INFO] PROGRESS: at 81.84% examples, 514409 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:18,083 gensim.models.word2vec [INFO] PROGRESS: at 82.76% examples, 514565 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:19,084 gensim.models.word2vec [INFO] PROGRESS: at 83.64% examples, 514568 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:20,095 gensim.models.word2vec [INFO] PROGRESS: at 84.38% examples, 514793 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:21,096 gensim.models.word2vec [INFO] PROGRESS: at 85.36% examples, 514659 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:22,099 gensim.models.word2vec [INFO] PROGRESS: at 86.10% examples, 514851 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:23,103 gensim.models.word2vec [INFO] PROGRESS: at 87.04% examples, 514695 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:24,104 gensim.models.word2vec [INFO] PROGRESS: at 87.82% examples, 514834 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:25,105 gensim.models.word2vec [INFO] PROGRESS: at 88.66% examples, 514827 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:26,111 gensim.models.word2vec [INFO] PROGRESS: at 89.58% examples, 514766 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:27,113 gensim.models.word2vec [INFO] PROGRESS: at 90.34% examples, 515235 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:28,116 gensim.models.word2vec [INFO] PROGRESS: at 91.31% examples, 514951 words/s, in_qsize 30, out_qsize 1
+2017-05-01 03:57:29,131 gensim.models.word2vec [INFO] PROGRESS: at 92.03% examples, 514965 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:30,132 gensim.models.word2vec [INFO] PROGRESS: at 93.00% examples, 515085 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:31,133 gensim.models.word2vec [INFO] PROGRESS: at 93.78% examples, 515107 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:32,135 gensim.models.word2vec [INFO] PROGRESS: at 94.60% examples, 515172 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:33,149 gensim.models.word2vec [INFO] PROGRESS: at 95.56% examples, 515149 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:34,164 gensim.models.word2vec [INFO] PROGRESS: at 96.28% examples, 515429 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:35,166 gensim.models.word2vec [INFO] PROGRESS: at 97.25% examples, 515152 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:36,169 gensim.models.word2vec [INFO] PROGRESS: at 98.02% examples, 515374 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:37,174 gensim.models.word2vec [INFO] PROGRESS: at 98.99% examples, 515447 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:38,176 gensim.models.word2vec [INFO] PROGRESS: at 99.80% examples, 515658 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:38,345 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 15 more threads
+2017-05-01 03:57:38,359 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 14 more threads
+2017-05-01 03:57:38,370 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 13 more threads
+2017-05-01 03:57:38,389 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 12 more threads
+2017-05-01 03:57:38,398 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 11 more threads
+2017-05-01 03:57:38,401 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 10 more threads
+2017-05-01 03:57:38,401 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 9 more threads
+2017-05-01 03:57:38,404 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 8 more threads
+2017-05-01 03:57:38,405 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 7 more threads
+2017-05-01 03:57:38,405 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 6 more threads
+2017-05-01 03:57:38,406 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 5 more threads
+2017-05-01 03:57:38,409 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 4 more threads
+2017-05-01 03:57:38,409 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 3 more threads
+2017-05-01 03:57:38,411 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 2 more threads
+2017-05-01 03:57:38,412 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 1 more threads
+2017-05-01 03:57:38,412 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 0 more threads
+2017-05-01 03:57:38,412 gensim.models.word2vec [INFO] training on 154760650 raw words (61364669 effective words) took 119.0s, 515847 effective words/s
+2017-05-01 03:57:38,414 gensim.models.word2vec [INFO] training model with 16 workers on 42353 vocabulary and 500 features, using sg=0 hs=0 sample=1e-05 negative=2 window=8
+2017-05-01 03:57:39,437 gensim.models.word2vec [INFO] PROGRESS: at 0.91% examples, 487800 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:40,449 gensim.models.word2vec [INFO] PROGRESS: at 1.75% examples, 506971 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:41,452 gensim.models.word2vec [INFO] PROGRESS: at 2.57% examples, 521717 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:42,465 gensim.models.word2vec [INFO] PROGRESS: at 3.50% examples, 512790 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:43,481 gensim.models.word2vec [INFO] PROGRESS: at 4.23% examples, 523927 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:44,485 gensim.models.word2vec [INFO] PROGRESS: at 5.21% examples, 517332 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:45,489 gensim.models.word2vec [INFO] PROGRESS: at 6.00% examples, 521351 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:46,490 gensim.models.word2vec [INFO] PROGRESS: at 6.93% examples, 519505 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:47,497 gensim.models.word2vec [INFO] PROGRESS: at 7.75% examples, 520420 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:48,519 gensim.models.word2vec [INFO] PROGRESS: at 8.60% examples, 522404 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:49,521 gensim.models.word2vec [INFO] PROGRESS: at 9.49% examples, 518119 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:50,538 gensim.models.word2vec [INFO] PROGRESS: at 10.23% examples, 522417 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:51,545 gensim.models.word2vec [INFO] PROGRESS: at 11.21% examples, 519299 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:52,548 gensim.models.word2vec [INFO] PROGRESS: at 12.00% examples, 521268 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:53,548 gensim.models.word2vec [INFO] PROGRESS: at 12.93% examples, 520201 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:54,549 gensim.models.word2vec [INFO] PROGRESS: at 13.75% examples, 520686 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:55,556 gensim.models.word2vec [INFO] PROGRESS: at 14.58% examples, 522341 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:56,565 gensim.models.word2vec [INFO] PROGRESS: at 15.51% examples, 520382 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:57:57,575 gensim.models.word2vec [INFO] PROGRESS: at 16.24% examples, 523097 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:58,586 gensim.models.word2vec [INFO] PROGRESS: at 17.22% examples, 521038 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:57:59,589 gensim.models.word2vec [INFO] PROGRESS: at 17.82% examples, 515997 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:00,591 gensim.models.word2vec [INFO] PROGRESS: at 18.69% examples, 516434 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:01,593 gensim.models.word2vec [INFO] PROGRESS: at 19.59% examples, 515985 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:02,605 gensim.models.word2vec [INFO] PROGRESS: at 20.36% examples, 517933 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:03,624 gensim.models.word2vec [INFO] PROGRESS: at 21.37% examples, 517513 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:04,624 gensim.models.word2vec [INFO] PROGRESS: at 21.89% examples, 512731 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:05,633 gensim.models.word2vec [INFO] PROGRESS: at 22.81% examples, 512745 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:06,638 gensim.models.word2vec [INFO] PROGRESS: at 23.68% examples, 513158 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:07,660 gensim.models.word2vec [INFO] PROGRESS: at 24.48% examples, 514665 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:08,669 gensim.models.word2vec [INFO] PROGRESS: at 25.46% examples, 514131 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:09,671 gensim.models.word2vec [INFO] PROGRESS: at 26.17% examples, 515403 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:10,692 gensim.models.word2vec [INFO] PROGRESS: at 27.18% examples, 515015 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:11,694 gensim.models.word2vec [INFO] PROGRESS: at 27.96% examples, 515695 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:12,695 gensim.models.word2vec [INFO] PROGRESS: at 28.89% examples, 515655 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:13,695 gensim.models.word2vec [INFO] PROGRESS: at 29.70% examples, 515396 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:14,699 gensim.models.word2vec [INFO] PROGRESS: at 30.48% examples, 516357 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:15,703 gensim.models.word2vec [INFO] PROGRESS: at 31.46% examples, 515940 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:16,703 gensim.models.word2vec [INFO] PROGRESS: at 32.18% examples, 517397 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:17,706 gensim.models.word2vec [INFO] PROGRESS: at 33.20% examples, 517145 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:18,716 gensim.models.word2vec [INFO] PROGRESS: at 34.00% examples, 517883 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:19,719 gensim.models.word2vec [INFO] PROGRESS: at 34.88% examples, 517027 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:20,720 gensim.models.word2vec [INFO] PROGRESS: at 35.71% examples, 516918 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:21,726 gensim.models.word2vec [INFO] PROGRESS: at 36.50% examples, 517682 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:22,727 gensim.models.word2vec [INFO] PROGRESS: at 37.47% examples, 517444 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:23,732 gensim.models.word2vec [INFO] PROGRESS: at 38.19% examples, 518379 words/s, in_qsize 31, out_qsize 1
+2017-05-01 03:58:24,737 gensim.models.word2vec [INFO] PROGRESS: at 39.18% examples, 517946 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:25,738 gensim.models.word2vec [INFO] PROGRESS: at 39.93% examples, 518019 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:26,739 gensim.models.word2vec [INFO] PROGRESS: at 40.91% examples, 518338 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:27,745 gensim.models.word2vec [INFO] PROGRESS: at 41.74% examples, 518480 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:28,747 gensim.models.word2vec [INFO] PROGRESS: at 42.56% examples, 519209 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:29,753 gensim.models.word2vec [INFO] PROGRESS: at 43.37% examples, 517079 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:30,757 gensim.models.word2vec [INFO] PROGRESS: at 44.11% examples, 517628 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:31,762 gensim.models.word2vec [INFO] PROGRESS: at 45.10% examples, 517786 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:32,767 gensim.models.word2vec [INFO] PROGRESS: at 45.89% examples, 518190 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:33,772 gensim.models.word2vec [INFO] PROGRESS: at 46.82% examples, 518216 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:34,772 gensim.models.word2vec [INFO] PROGRESS: at 47.68% examples, 518457 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:35,781 gensim.models.word2vec [INFO] PROGRESS: at 48.48% examples, 519102 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:36,790 gensim.models.word2vec [INFO] PROGRESS: at 49.46% examples, 518826 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:37,791 gensim.models.word2vec [INFO] PROGRESS: at 50.17% examples, 519444 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:38,797 gensim.models.word2vec [INFO] PROGRESS: at 51.17% examples, 519223 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:39,803 gensim.models.word2vec [INFO] PROGRESS: at 51.93% examples, 519229 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:40,815 gensim.models.word2vec [INFO] PROGRESS: at 52.87% examples, 519159 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:41,820 gensim.models.word2vec [INFO] PROGRESS: at 53.67% examples, 518712 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:42,820 gensim.models.word2vec [INFO] PROGRESS: at 54.45% examples, 519205 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:43,833 gensim.models.word2vec [INFO] PROGRESS: at 55.39% examples, 518538 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:44,835 gensim.models.word2vec [INFO] PROGRESS: at 56.13% examples, 519027 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:45,838 gensim.models.word2vec [INFO] PROGRESS: at 57.11% examples, 518977 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:46,852 gensim.models.word2vec [INFO] PROGRESS: at 57.83% examples, 518552 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:47,855 gensim.models.word2vec [INFO] PROGRESS: at 58.70% examples, 518487 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:48,864 gensim.models.word2vec [INFO] PROGRESS: at 59.60% examples, 518243 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:49,883 gensim.models.word2vec [INFO] PROGRESS: at 60.36% examples, 518766 words/s, in_qsize 30, out_qsize 1
+2017-05-01 03:58:50,884 gensim.models.word2vec [INFO] PROGRESS: at 61.36% examples, 518618 words/s, in_qsize 30, out_qsize 1
+2017-05-01 03:58:51,885 gensim.models.word2vec [INFO] PROGRESS: at 62.09% examples, 518794 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:52,892 gensim.models.word2vec [INFO] PROGRESS: at 63.05% examples, 518776 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:53,907 gensim.models.word2vec [INFO] PROGRESS: at 63.83% examples, 518857 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:54,912 gensim.models.word2vec [INFO] PROGRESS: at 64.76% examples, 519100 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:58:55,927 gensim.models.word2vec [INFO] PROGRESS: at 65.64% examples, 519025 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:56,939 gensim.models.word2vec [INFO] PROGRESS: at 66.45% examples, 519649 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:57,940 gensim.models.word2vec [INFO] PROGRESS: at 67.40% examples, 519270 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:58,943 gensim.models.word2vec [INFO] PROGRESS: at 68.15% examples, 519678 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:58:59,957 gensim.models.word2vec [INFO] PROGRESS: at 69.08% examples, 519287 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:00,960 gensim.models.word2vec [INFO] PROGRESS: at 69.86% examples, 519424 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:01,967 gensim.models.word2vec [INFO] PROGRESS: at 70.78% examples, 519451 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:02,968 gensim.models.word2vec [INFO] PROGRESS: at 71.65% examples, 519353 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:03,978 gensim.models.word2vec [INFO] PROGRESS: at 72.42% examples, 519858 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:04,986 gensim.models.word2vec [INFO] PROGRESS: at 73.30% examples, 518814 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:05,987 gensim.models.word2vec [INFO] PROGRESS: at 74.03% examples, 518922 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:06,999 gensim.models.word2vec [INFO] PROGRESS: at 75.02% examples, 519095 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:07,999 gensim.models.word2vec [INFO] PROGRESS: at 75.82% examples, 519396 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:09,006 gensim.models.word2vec [INFO] PROGRESS: at 76.70% examples, 519390 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:10,012 gensim.models.word2vec [INFO] PROGRESS: at 77.62% examples, 519375 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:11,019 gensim.models.word2vec [INFO] PROGRESS: at 78.38% examples, 519789 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:12,025 gensim.models.word2vec [INFO] PROGRESS: at 79.37% examples, 519601 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:13,027 gensim.models.word2vec [INFO] PROGRESS: at 80.09% examples, 519681 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:14,028 gensim.models.word2vec [INFO] PROGRESS: at 81.04% examples, 519559 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:15,037 gensim.models.word2vec [INFO] PROGRESS: at 81.83% examples, 519696 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:16,038 gensim.models.word2vec [INFO] PROGRESS: at 82.69% examples, 519651 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:17,047 gensim.models.word2vec [INFO] PROGRESS: at 83.59% examples, 519431 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:18,054 gensim.models.word2vec [INFO] PROGRESS: at 84.35% examples, 519892 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:19,065 gensim.models.word2vec [INFO] PROGRESS: at 85.35% examples, 519676 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:20,067 gensim.models.word2vec [INFO] PROGRESS: at 86.06% examples, 519665 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:21,076 gensim.models.word2vec [INFO] PROGRESS: at 87.02% examples, 519646 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:22,077 gensim.models.word2vec [INFO] PROGRESS: at 87.81% examples, 519787 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:23,083 gensim.models.word2vec [INFO] PROGRESS: at 88.69% examples, 519862 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:24,091 gensim.models.word2vec [INFO] PROGRESS: at 89.61% examples, 519846 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:25,094 gensim.models.word2vec [INFO] PROGRESS: at 90.37% examples, 520189 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:26,115 gensim.models.word2vec [INFO] PROGRESS: at 91.37% examples, 520025 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:27,122 gensim.models.word2vec [INFO] PROGRESS: at 92.11% examples, 520247 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:28,124 gensim.models.word2vec [INFO] PROGRESS: at 93.11% examples, 520357 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:29,126 gensim.models.word2vec [INFO] PROGRESS: at 93.89% examples, 520487 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:30,159 gensim.models.word2vec [INFO] PROGRESS: at 94.75% examples, 520129 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:31,162 gensim.models.word2vec [INFO] PROGRESS: at 95.59% examples, 519745 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:32,164 gensim.models.word2vec [INFO] PROGRESS: at 96.31% examples, 520016 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:33,168 gensim.models.word2vec [INFO] PROGRESS: at 97.27% examples, 519660 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:34,169 gensim.models.word2vec [INFO] PROGRESS: at 98.01% examples, 519718 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:35,170 gensim.models.word2vec [INFO] PROGRESS: at 98.96% examples, 519710 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:36,171 gensim.models.word2vec [INFO] PROGRESS: at 99.77% examples, 519784 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:36,365 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 15 more threads
+2017-05-01 03:59:36,382 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 14 more threads
+2017-05-01 03:59:36,386 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 13 more threads
+2017-05-01 03:59:36,401 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 12 more threads
+2017-05-01 03:59:36,416 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 11 more threads
+2017-05-01 03:59:36,417 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 10 more threads
+2017-05-01 03:59:36,419 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 9 more threads
+2017-05-01 03:59:36,421 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 8 more threads
+2017-05-01 03:59:36,421 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 7 more threads
+2017-05-01 03:59:36,423 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 6 more threads
+2017-05-01 03:59:36,424 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 5 more threads
+2017-05-01 03:59:36,427 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 4 more threads
+2017-05-01 03:59:36,428 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 3 more threads
+2017-05-01 03:59:36,429 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 2 more threads
+2017-05-01 03:59:36,429 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 1 more threads
+2017-05-01 03:59:36,430 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 0 more threads
+2017-05-01 03:59:36,430 gensim.models.word2vec [INFO] training on 154760650 raw words (61375317 effective words) took 118.0s, 520083 effective words/s
+2017-05-01 03:59:36,431 gensim.models.word2vec [INFO] training model with 16 workers on 42353 vocabulary and 500 features, using sg=0 hs=0 sample=1e-05 negative=2 window=8
+2017-05-01 03:59:37,447 gensim.models.word2vec [INFO] PROGRESS: at 0.92% examples, 495743 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:38,455 gensim.models.word2vec [INFO] PROGRESS: at 1.75% examples, 516308 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:39,461 gensim.models.word2vec [INFO] PROGRESS: at 2.56% examples, 521925 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:40,464 gensim.models.word2vec [INFO] PROGRESS: at 3.44% examples, 507074 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:41,468 gensim.models.word2vec [INFO] PROGRESS: at 4.11% examples, 505636 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:42,480 gensim.models.word2vec [INFO] PROGRESS: at 5.01% examples, 499073 words/s, in_qsize 32, out_qsize 1
+2017-05-01 03:59:43,493 gensim.models.word2vec [INFO] PROGRESS: at 5.78% examples, 498608 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:44,497 gensim.models.word2vec [INFO] PROGRESS: at 6.54% examples, 499816 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:45,520 gensim.models.word2vec [INFO] PROGRESS: at 7.45% examples, 495424 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:46,520 gensim.models.word2vec [INFO] PROGRESS: at 8.12% examples, 496599 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:47,525 gensim.models.word2vec [INFO] PROGRESS: at 9.02% examples, 493699 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:48,526 gensim.models.word2vec [INFO] PROGRESS: at 9.73% examples, 490639 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:49,539 gensim.models.word2vec [INFO] PROGRESS: at 10.42% examples, 490554 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:50,545 gensim.models.word2vec [INFO] PROGRESS: at 11.28% examples, 485995 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:51,548 gensim.models.word2vec [INFO] PROGRESS: at 11.96% examples, 485883 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:52,552 gensim.models.word2vec [INFO] PROGRESS: at 12.75% examples, 483487 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:53,559 gensim.models.word2vec [INFO] PROGRESS: at 13.57% examples, 481922 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:54,572 gensim.models.word2vec [INFO] PROGRESS: at 14.24% examples, 484847 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:55,583 gensim.models.word2vec [INFO] PROGRESS: at 15.21% examples, 484228 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:56,587 gensim.models.word2vec [INFO] PROGRESS: at 15.93% examples, 485281 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:57,592 gensim.models.word2vec [INFO] PROGRESS: at 16.88% examples, 487041 words/s, in_qsize 32, out_qsize 0
+2017-05-01 03:59:58,598 gensim.models.word2vec [INFO] PROGRESS: at 17.69% examples, 487606 words/s, in_qsize 31, out_qsize 0
+2017-05-01 03:59:59,604 gensim.models.word2vec [INFO] PROGRESS: at 18.40% examples, 489040 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:00,623 gensim.models.word2vec [INFO] PROGRESS: at 19.39% examples, 489038 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:01,624 gensim.models.word2vec [INFO] PROGRESS: at 20.10% examples, 490712 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:02,627 gensim.models.word2vec [INFO] PROGRESS: at 21.06% examples, 491356 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:03,653 gensim.models.word2vec [INFO] PROGRESS: at 21.83% examples, 492134 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:04,654 gensim.models.word2vec [INFO] PROGRESS: at 22.63% examples, 491947 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:05,666 gensim.models.word2vec [INFO] PROGRESS: at 23.56% examples, 492319 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:06,680 gensim.models.word2vec [INFO] PROGRESS: at 24.28% examples, 494157 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:07,684 gensim.models.word2vec [INFO] PROGRESS: at 25.25% examples, 493760 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:08,695 gensim.models.word2vec [INFO] PROGRESS: at 26.02% examples, 495296 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:09,711 gensim.models.word2vec [INFO] PROGRESS: at 27.01% examples, 496435 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:10,716 gensim.models.word2vec [INFO] PROGRESS: at 27.81% examples, 497466 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:11,720 gensim.models.word2vec [INFO] PROGRESS: at 28.68% examples, 498342 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:12,729 gensim.models.word2vec [INFO] PROGRESS: at 29.59% examples, 498518 words/s, in_qsize 30, out_qsize 1
+2017-05-01 04:00:13,740 gensim.models.word2vec [INFO] PROGRESS: at 30.36% examples, 500280 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:14,745 gensim.models.word2vec [INFO] PROGRESS: at 31.34% examples, 500209 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:15,748 gensim.models.word2vec [INFO] PROGRESS: at 32.05% examples, 500639 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:16,752 gensim.models.word2vec [INFO] PROGRESS: at 33.01% examples, 501021 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:17,753 gensim.models.word2vec [INFO] PROGRESS: at 33.79% examples, 501244 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:18,769 gensim.models.word2vec [INFO] PROGRESS: at 34.60% examples, 501675 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:19,777 gensim.models.word2vec [INFO] PROGRESS: at 35.56% examples, 501919 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:20,793 gensim.models.word2vec [INFO] PROGRESS: at 36.28% examples, 502943 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:21,795 gensim.models.word2vec [INFO] PROGRESS: at 37.29% examples, 502958 words/s, in_qsize 31, out_qsize 1
+2017-05-01 04:00:22,797 gensim.models.word2vec [INFO] PROGRESS: at 38.04% examples, 503647 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:23,800 gensim.models.word2vec [INFO] PROGRESS: at 39.00% examples, 503982 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:24,802 gensim.models.word2vec [INFO] PROGRESS: at 39.77% examples, 503973 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:25,828 gensim.models.word2vec [INFO] PROGRESS: at 40.60% examples, 504455 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:26,834 gensim.models.word2vec [INFO] PROGRESS: at 41.56% examples, 504612 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:27,835 gensim.models.word2vec [INFO] PROGRESS: at 42.27% examples, 505613 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:28,841 gensim.models.word2vec [INFO] PROGRESS: at 43.22% examples, 504974 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:29,853 gensim.models.word2vec [INFO] PROGRESS: at 44.01% examples, 505668 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:30,866 gensim.models.word2vec [INFO] PROGRESS: at 44.94% examples, 505579 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:31,869 gensim.models.word2vec [INFO] PROGRESS: at 45.75% examples, 505961 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:32,870 gensim.models.word2vec [INFO] PROGRESS: at 46.58% examples, 506625 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:33,874 gensim.models.word2vec [INFO] PROGRESS: at 47.49% examples, 506200 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:34,876 gensim.models.word2vec [INFO] PROGRESS: at 48.27% examples, 507547 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:35,887 gensim.models.word2vec [INFO] PROGRESS: at 49.21% examples, 507016 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:36,890 gensim.models.word2vec [INFO] PROGRESS: at 49.97% examples, 507302 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:37,897 gensim.models.word2vec [INFO] PROGRESS: at 50.86% examples, 507041 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:38,909 gensim.models.word2vec [INFO] PROGRESS: at 51.70% examples, 507114 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:39,914 gensim.models.word2vec [INFO] PROGRESS: at 52.50% examples, 507845 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:40,916 gensim.models.word2vec [INFO] PROGRESS: at 53.43% examples, 507505 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:41,917 gensim.models.word2vec [INFO] PROGRESS: at 54.16% examples, 507951 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:42,919 gensim.models.word2vec [INFO] PROGRESS: at 55.14% examples, 508126 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:43,942 gensim.models.word2vec [INFO] PROGRESS: at 55.91% examples, 508355 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:44,953 gensim.models.word2vec [INFO] PROGRESS: at 56.84% examples, 508439 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:45,972 gensim.models.word2vec [INFO] PROGRESS: at 57.70% examples, 508567 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:46,976 gensim.models.word2vec [INFO] PROGRESS: at 58.50% examples, 509205 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:47,990 gensim.models.word2vec [INFO] PROGRESS: at 59.40% examples, 508562 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:48,993 gensim.models.word2vec [INFO] PROGRESS: at 60.12% examples, 508793 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:49,998 gensim.models.word2vec [INFO] PROGRESS: at 61.08% examples, 508877 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:51,002 gensim.models.word2vec [INFO] PROGRESS: at 61.84% examples, 508903 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:52,009 gensim.models.word2vec [INFO] PROGRESS: at 62.76% examples, 509218 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:53,033 gensim.models.word2vec [INFO] PROGRESS: at 63.64% examples, 509195 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:54,044 gensim.models.word2vec [INFO] PROGRESS: at 64.44% examples, 509916 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:55,047 gensim.models.word2vec [INFO] PROGRESS: at 65.39% examples, 509653 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:56,050 gensim.models.word2vec [INFO] PROGRESS: at 66.15% examples, 510206 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:57,058 gensim.models.word2vec [INFO] PROGRESS: at 67.14% examples, 510371 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:00:58,065 gensim.models.word2vec [INFO] PROGRESS: at 67.92% examples, 510671 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:00:59,072 gensim.models.word2vec [INFO] PROGRESS: at 68.85% examples, 510744 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:00,076 gensim.models.word2vec [INFO] PROGRESS: at 69.73% examples, 511032 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:01,079 gensim.models.word2vec [INFO] PROGRESS: at 70.52% examples, 511509 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:02,091 gensim.models.word2vec [INFO] PROGRESS: at 71.49% examples, 511352 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:03,093 gensim.models.word2vec [INFO] PROGRESS: at 72.18% examples, 511751 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:04,104 gensim.models.word2vec [INFO] PROGRESS: at 73.18% examples, 511610 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:05,115 gensim.models.word2vec [INFO] PROGRESS: at 73.76% examples, 510144 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:06,119 gensim.models.word2vec [INFO] PROGRESS: at 74.59% examples, 510445 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:07,134 gensim.models.word2vec [INFO] PROGRESS: at 75.49% examples, 509981 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:08,136 gensim.models.word2vec [INFO] PROGRESS: at 76.19% examples, 510487 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:09,166 gensim.models.word2vec [INFO] PROGRESS: at 77.18% examples, 510149 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:10,176 gensim.models.word2vec [INFO] PROGRESS: at 77.76% examples, 508731 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:11,183 gensim.models.word2vec [INFO] PROGRESS: at 78.60% examples, 509107 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:12,190 gensim.models.word2vec [INFO] PROGRESS: at 79.56% examples, 509149 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:13,201 gensim.models.word2vec [INFO] PROGRESS: at 80.28% examples, 509596 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:14,203 gensim.models.word2vec [INFO] PROGRESS: at 81.25% examples, 509327 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:15,210 gensim.models.word2vec [INFO] PROGRESS: at 82.02% examples, 509693 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:16,210 gensim.models.word2vec [INFO] PROGRESS: at 82.98% examples, 509803 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:17,213 gensim.models.word2vec [INFO] PROGRESS: at 83.76% examples, 509731 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:18,224 gensim.models.word2vec [INFO] PROGRESS: at 84.60% examples, 510052 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:19,225 gensim.models.word2vec [INFO] PROGRESS: at 85.54% examples, 509967 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:20,226 gensim.models.word2vec [INFO] PROGRESS: at 86.23% examples, 510406 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:21,251 gensim.models.word2vec [INFO] PROGRESS: at 87.21% examples, 510014 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:22,262 gensim.models.word2vec [INFO] PROGRESS: at 87.93% examples, 509937 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:23,271 gensim.models.word2vec [INFO] PROGRESS: at 88.84% examples, 509841 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:24,272 gensim.models.word2vec [INFO] PROGRESS: at 89.69% examples, 509961 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:25,288 gensim.models.word2vec [INFO] PROGRESS: at 90.48% examples, 510341 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:26,293 gensim.models.word2vec [INFO] PROGRESS: at 91.46% examples, 510290 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:27,294 gensim.models.word2vec [INFO] PROGRESS: at 92.17% examples, 510685 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:28,299 gensim.models.word2vec [INFO] PROGRESS: at 93.18% examples, 510701 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:29,299 gensim.models.word2vec [INFO] PROGRESS: at 93.93% examples, 510772 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:30,308 gensim.models.word2vec [INFO] PROGRESS: at 94.90% examples, 510938 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:31,312 gensim.models.word2vec [INFO] PROGRESS: at 95.73% examples, 511040 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:32,314 gensim.models.word2vec [INFO] PROGRESS: at 96.55% examples, 511455 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:33,320 gensim.models.word2vec [INFO] PROGRESS: at 97.49% examples, 511229 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:34,332 gensim.models.word2vec [INFO] PROGRESS: at 98.23% examples, 511811 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:35,338 gensim.models.word2vec [INFO] PROGRESS: at 99.21% examples, 511568 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:36,224 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 15 more threads
+2017-05-01 04:01:36,248 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 14 more threads
+2017-05-01 04:01:36,250 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 13 more threads
+2017-05-01 04:01:36,272 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 12 more threads
+2017-05-01 04:01:36,277 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 11 more threads
+2017-05-01 04:01:36,279 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 10 more threads
+2017-05-01 04:01:36,281 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 9 more threads
+2017-05-01 04:01:36,284 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 8 more threads
+2017-05-01 04:01:36,286 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 7 more threads
+2017-05-01 04:01:36,287 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 6 more threads
+2017-05-01 04:01:36,287 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 5 more threads
+2017-05-01 04:01:36,288 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 4 more threads
+2017-05-01 04:01:36,288 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 3 more threads
+2017-05-01 04:01:36,289 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 2 more threads
+2017-05-01 04:01:36,289 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 1 more threads
+2017-05-01 04:01:36,291 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 0 more threads
+2017-05-01 04:01:36,291 gensim.models.word2vec [INFO] training on 154760650 raw words (61371496 effective words) took 119.9s, 512045 effective words/s
+2017-05-01 04:01:36,292 gensim.models.word2vec [INFO] training model with 16 workers on 42353 vocabulary and 500 features, using sg=0 hs=0 sample=1e-05 negative=2 window=8
+2017-05-01 04:01:37,297 gensim.models.word2vec [INFO] PROGRESS: at 0.90% examples, 491980 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:38,297 gensim.models.word2vec [INFO] PROGRESS: at 1.74% examples, 511982 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:39,299 gensim.models.word2vec [INFO] PROGRESS: at 2.58% examples, 528014 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:40,315 gensim.models.word2vec [INFO] PROGRESS: at 3.36% examples, 496545 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:41,324 gensim.models.word2vec [INFO] PROGRESS: at 4.10% examples, 505110 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:42,329 gensim.models.word2vec [INFO] PROGRESS: at 5.06% examples, 505221 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:43,350 gensim.models.word2vec [INFO] PROGRESS: at 5.83% examples, 506581 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:44,351 gensim.models.word2vec [INFO] PROGRESS: at 6.69% examples, 507060 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:45,368 gensim.models.word2vec [INFO] PROGRESS: at 7.55% examples, 502641 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:46,381 gensim.models.word2vec [INFO] PROGRESS: at 8.23% examples, 505960 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:47,396 gensim.models.word2vec [INFO] PROGRESS: at 9.14% examples, 499932 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:48,398 gensim.models.word2vec [INFO] PROGRESS: at 9.86% examples, 499580 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:49,400 gensim.models.word2vec [INFO] PROGRESS: at 10.66% examples, 498071 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:50,415 gensim.models.word2vec [INFO] PROGRESS: at 11.58% examples, 498457 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:51,418 gensim.models.word2vec [INFO] PROGRESS: at 12.31% examples, 502137 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:52,430 gensim.models.word2vec [INFO] PROGRESS: at 13.24% examples, 499457 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:53,458 gensim.models.word2vec [INFO] PROGRESS: at 14.01% examples, 501225 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:54,460 gensim.models.word2vec [INFO] PROGRESS: at 14.93% examples, 501068 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:55,477 gensim.models.word2vec [INFO] PROGRESS: at 15.75% examples, 501611 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:56,489 gensim.models.word2vec [INFO] PROGRESS: at 16.59% examples, 504189 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:01:57,495 gensim.models.word2vec [INFO] PROGRESS: at 17.51% examples, 503468 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:58,497 gensim.models.word2vec [INFO] PROGRESS: at 18.23% examples, 506393 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:01:59,518 gensim.models.word2vec [INFO] PROGRESS: at 19.22% examples, 505268 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:00,541 gensim.models.word2vec [INFO] PROGRESS: at 20.01% examples, 506727 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:01,556 gensim.models.word2vec [INFO] PROGRESS: at 21.00% examples, 507696 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:02,557 gensim.models.word2vec [INFO] PROGRESS: at 21.80% examples, 508836 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:03,566 gensim.models.word2vec [INFO] PROGRESS: at 22.63% examples, 509028 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:04,573 gensim.models.word2vec [INFO] PROGRESS: at 23.58% examples, 509234 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:05,574 gensim.models.word2vec [INFO] PROGRESS: at 24.33% examples, 511199 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:06,584 gensim.models.word2vec [INFO] PROGRESS: at 25.33% examples, 510833 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:07,586 gensim.models.word2vec [INFO] PROGRESS: at 26.08% examples, 511668 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:08,587 gensim.models.word2vec [INFO] PROGRESS: at 27.03% examples, 511878 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:09,588 gensim.models.word2vec [INFO] PROGRESS: at 27.83% examples, 512773 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:10,600 gensim.models.word2vec [INFO] PROGRESS: at 28.38% examples, 508578 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:11,616 gensim.models.word2vec [INFO] PROGRESS: at 29.37% examples, 508268 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:12,628 gensim.models.word2vec [INFO] PROGRESS: at 30.11% examples, 509197 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:13,634 gensim.models.word2vec [INFO] PROGRESS: at 31.09% examples, 509530 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:14,637 gensim.models.word2vec [INFO] PROGRESS: at 31.86% examples, 509970 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:15,649 gensim.models.word2vec [INFO] PROGRESS: at 32.81% examples, 510471 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:16,677 gensim.models.word2vec [INFO] PROGRESS: at 33.65% examples, 509847 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:17,678 gensim.models.word2vec [INFO] PROGRESS: at 34.40% examples, 510980 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:18,680 gensim.models.word2vec [INFO] PROGRESS: at 35.38% examples, 510597 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:19,683 gensim.models.word2vec [INFO] PROGRESS: at 36.12% examples, 511357 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:20,685 gensim.models.word2vec [INFO] PROGRESS: at 37.11% examples, 511705 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:21,687 gensim.models.word2vec [INFO] PROGRESS: at 37.86% examples, 511863 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:22,697 gensim.models.word2vec [INFO] PROGRESS: at 38.76% examples, 511866 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:23,734 gensim.models.word2vec [INFO] PROGRESS: at 39.65% examples, 511613 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:24,739 gensim.models.word2vec [INFO] PROGRESS: at 40.42% examples, 512630 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:25,768 gensim.models.word2vec [INFO] PROGRESS: at 41.39% examples, 511958 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:26,768 gensim.models.word2vec [INFO] PROGRESS: at 42.14% examples, 512814 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:27,772 gensim.models.word2vec [INFO] PROGRESS: at 43.11% examples, 512855 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:28,775 gensim.models.word2vec [INFO] PROGRESS: at 43.88% examples, 513018 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:29,802 gensim.models.word2vec [INFO] PROGRESS: at 44.79% examples, 512911 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:30,811 gensim.models.word2vec [INFO] PROGRESS: at 45.65% examples, 512802 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:31,822 gensim.models.word2vec [INFO] PROGRESS: at 46.44% examples, 513674 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:32,832 gensim.models.word2vec [INFO] PROGRESS: at 47.38% examples, 513099 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:33,835 gensim.models.word2vec [INFO] PROGRESS: at 48.14% examples, 513875 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:34,838 gensim.models.word2vec [INFO] PROGRESS: at 49.12% examples, 513965 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:35,867 gensim.models.word2vec [INFO] PROGRESS: at 49.92% examples, 514209 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:36,877 gensim.models.word2vec [INFO] PROGRESS: at 50.85% examples, 514274 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:37,890 gensim.models.word2vec [INFO] PROGRESS: at 51.72% examples, 514554 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:38,891 gensim.models.word2vec [INFO] PROGRESS: at 52.49% examples, 514963 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:39,894 gensim.models.word2vec [INFO] PROGRESS: at 53.44% examples, 514478 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:40,903 gensim.models.word2vec [INFO] PROGRESS: at 54.12% examples, 514476 words/s, in_qsize 30, out_qsize 1
+2017-05-01 04:02:41,907 gensim.models.word2vec [INFO] PROGRESS: at 55.05% examples, 514050 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:42,918 gensim.models.word2vec [INFO] PROGRESS: at 55.83% examples, 514141 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:43,921 gensim.models.word2vec [INFO] PROGRESS: at 56.70% examples, 514205 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:45,039 gensim.models.word2vec [INFO] PROGRESS: at 57.49% examples, 512167 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:46,041 gensim.models.word2vec [INFO] PROGRESS: at 58.17% examples, 512383 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:47,047 gensim.models.word2vec [INFO] PROGRESS: at 59.11% examples, 511898 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:48,050 gensim.models.word2vec [INFO] PROGRESS: at 59.87% examples, 512055 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:49,056 gensim.models.word2vec [INFO] PROGRESS: at 60.78% examples, 512084 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:50,094 gensim.models.word2vec [INFO] PROGRESS: at 61.64% examples, 511816 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:51,096 gensim.models.word2vec [INFO] PROGRESS: at 62.36% examples, 512025 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:52,101 gensim.models.word2vec [INFO] PROGRESS: at 63.30% examples, 511449 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:53,111 gensim.models.word2vec [INFO] PROGRESS: at 64.02% examples, 511557 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:54,119 gensim.models.word2vec [INFO] PROGRESS: at 65.00% examples, 511771 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:55,119 gensim.models.word2vec [INFO] PROGRESS: at 65.79% examples, 511948 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:02:56,122 gensim.models.word2vec [INFO] PROGRESS: at 66.61% examples, 512019 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:57,137 gensim.models.word2vec [INFO] PROGRESS: at 67.56% examples, 511971 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:58,150 gensim.models.word2vec [INFO] PROGRESS: at 68.28% examples, 512411 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:02:59,155 gensim.models.word2vec [INFO] PROGRESS: at 69.24% examples, 511996 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:00,162 gensim.models.word2vec [INFO] PROGRESS: at 70.02% examples, 512404 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:03:01,163 gensim.models.word2vec [INFO] PROGRESS: at 70.97% examples, 512453 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:03:02,165 gensim.models.word2vec [INFO] PROGRESS: at 71.76% examples, 512491 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:03,173 gensim.models.word2vec [INFO] PROGRESS: at 72.54% examples, 512526 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:03:04,174 gensim.models.word2vec [INFO] PROGRESS: at 73.45% examples, 512101 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:03:05,185 gensim.models.word2vec [INFO] PROGRESS: at 74.15% examples, 512155 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:06,188 gensim.models.word2vec [INFO] PROGRESS: at 75.12% examples, 512231 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:07,190 gensim.models.word2vec [INFO] PROGRESS: at 75.89% examples, 512341 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:08,194 gensim.models.word2vec [INFO] PROGRESS: at 76.79% examples, 512333 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:09,195 gensim.models.word2vec [INFO] PROGRESS: at 77.65% examples, 512322 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:10,202 gensim.models.word2vec [INFO] PROGRESS: at 78.42% examples, 512815 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:11,202 gensim.models.word2vec [INFO] PROGRESS: at 79.38% examples, 512572 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:12,218 gensim.models.word2vec [INFO] PROGRESS: at 80.15% examples, 512989 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:13,234 gensim.models.word2vec [INFO] PROGRESS: at 81.14% examples, 513056 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:14,242 gensim.models.word2vec [INFO] PROGRESS: at 81.92% examples, 513236 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:15,257 gensim.models.word2vec [INFO] PROGRESS: at 82.78% examples, 512940 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:16,257 gensim.models.word2vec [INFO] PROGRESS: at 83.65% examples, 512973 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:17,263 gensim.models.word2vec [INFO] PROGRESS: at 84.43% examples, 513438 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:03:18,269 gensim.models.word2vec [INFO] PROGRESS: at 85.39% examples, 513177 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:19,270 gensim.models.word2vec [INFO] PROGRESS: at 86.14% examples, 513619 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:20,276 gensim.models.word2vec [INFO] PROGRESS: at 86.99% examples, 512821 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:21,279 gensim.models.word2vec [INFO] PROGRESS: at 87.79% examples, 513010 words/s, in_qsize 30, out_qsize 1
+2017-05-01 04:03:22,283 gensim.models.word2vec [INFO] PROGRESS: at 88.61% examples, 513093 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:23,284 gensim.models.word2vec [INFO] PROGRESS: at 89.56% examples, 513039 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:03:24,290 gensim.models.word2vec [INFO] PROGRESS: at 90.23% examples, 513267 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:25,293 gensim.models.word2vec [INFO] PROGRESS: at 91.20% examples, 512940 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:03:26,296 gensim.models.word2vec [INFO] PROGRESS: at 91.92% examples, 512810 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:27,308 gensim.models.word2vec [INFO] PROGRESS: at 92.83% examples, 512738 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:28,319 gensim.models.word2vec [INFO] PROGRESS: at 93.69% examples, 512817 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:03:29,326 gensim.models.word2vec [INFO] PROGRESS: at 94.50% examples, 513238 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:30,327 gensim.models.word2vec [INFO] PROGRESS: at 95.48% examples, 513225 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:31,328 gensim.models.word2vec [INFO] PROGRESS: at 96.20% examples, 513761 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:32,338 gensim.models.word2vec [INFO] PROGRESS: at 97.21% examples, 513568 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:03:33,342 gensim.models.word2vec [INFO] PROGRESS: at 97.99% examples, 513812 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:34,356 gensim.models.word2vec [INFO] PROGRESS: at 98.94% examples, 513779 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:35,364 gensim.models.word2vec [INFO] PROGRESS: at 99.77% examples, 513938 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:35,563 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 15 more threads
+2017-05-01 04:03:35,583 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 14 more threads
+2017-05-01 04:03:35,591 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 13 more threads
+2017-05-01 04:03:35,609 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 12 more threads
+2017-05-01 04:03:35,616 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 11 more threads
+2017-05-01 04:03:35,617 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 10 more threads
+2017-05-01 04:03:35,620 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 9 more threads
+2017-05-01 04:03:35,623 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 8 more threads
+2017-05-01 04:03:35,624 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 7 more threads
+2017-05-01 04:03:35,625 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 6 more threads
+2017-05-01 04:03:35,627 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 5 more threads
+2017-05-01 04:03:35,627 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 4 more threads
+2017-05-01 04:03:35,628 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 3 more threads
+2017-05-01 04:03:35,629 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 2 more threads
+2017-05-01 04:03:35,630 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 1 more threads
+2017-05-01 04:03:35,631 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 0 more threads
+2017-05-01 04:03:35,631 gensim.models.word2vec [INFO] training on 154760650 raw words (61370783 effective words) took 119.3s, 514276 effective words/s
+2017-05-01 04:03:35,632 gensim.models.word2vec [INFO] training model with 16 workers on 42353 vocabulary and 500 features, using sg=0 hs=0 sample=1e-05 negative=2 window=8
+2017-05-01 04:03:36,645 gensim.models.word2vec [INFO] PROGRESS: at 0.92% examples, 496679 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:37,646 gensim.models.word2vec [INFO] PROGRESS: at 1.75% examples, 516340 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:38,663 gensim.models.word2vec [INFO] PROGRESS: at 2.60% examples, 526820 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:39,664 gensim.models.word2vec [INFO] PROGRESS: at 3.56% examples, 525009 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:40,684 gensim.models.word2vec [INFO] PROGRESS: at 4.28% examples, 528906 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:41,684 gensim.models.word2vec [INFO] PROGRESS: at 5.27% examples, 522815 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:42,690 gensim.models.word2vec [INFO] PROGRESS: at 6.03% examples, 525458 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:43,695 gensim.models.word2vec [INFO] PROGRESS: at 7.02% examples, 526911 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:44,695 gensim.models.word2vec [INFO] PROGRESS: at 7.82% examples, 529042 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:45,698 gensim.models.word2vec [INFO] PROGRESS: at 8.66% examples, 526695 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:46,700 gensim.models.word2vec [INFO] PROGRESS: at 9.49% examples, 519461 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:47,703 gensim.models.word2vec [INFO] PROGRESS: at 10.12% examples, 516220 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:03:48,703 gensim.models.word2vec [INFO] PROGRESS: at 10.96% examples, 509499 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:49,706 gensim.models.word2vec [INFO] PROGRESS: at 11.66% examples, 504510 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:50,712 gensim.models.word2vec [INFO] PROGRESS: at 12.10% examples, 494026 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:51,715 gensim.models.word2vec [INFO] PROGRESS: at 13.02% examples, 493100 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:52,725 gensim.models.word2vec [INFO] PROGRESS: at 13.81% examples, 494958 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:03:53,726 gensim.models.word2vec [INFO] PROGRESS: at 14.62% examples, 495818 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:54,744 gensim.models.word2vec [INFO] PROGRESS: at 15.56% examples, 495974 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:55,756 gensim.models.word2vec [INFO] PROGRESS: at 16.23% examples, 497692 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:56,773 gensim.models.word2vec [INFO] PROGRESS: at 17.21% examples, 496667 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:57,775 gensim.models.word2vec [INFO] PROGRESS: at 18.00% examples, 498916 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:03:58,796 gensim.models.word2vec [INFO] PROGRESS: at 18.94% examples, 499107 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:03:59,799 gensim.models.word2vec [INFO] PROGRESS: at 19.75% examples, 500262 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:00,809 gensim.models.word2vec [INFO] PROGRESS: at 20.59% examples, 501963 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:01,819 gensim.models.word2vec [INFO] PROGRESS: at 21.54% examples, 501935 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:02,822 gensim.models.word2vec [INFO] PROGRESS: at 22.25% examples, 504142 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:03,828 gensim.models.word2vec [INFO] PROGRESS: at 23.23% examples, 503422 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:04,834 gensim.models.word2vec [INFO] PROGRESS: at 24.02% examples, 505020 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:05,835 gensim.models.word2vec [INFO] PROGRESS: at 24.99% examples, 505771 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:06,840 gensim.models.word2vec [INFO] PROGRESS: at 25.80% examples, 506870 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:07,859 gensim.models.word2vec [INFO] PROGRESS: at 26.65% examples, 507185 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:08,862 gensim.models.word2vec [INFO] PROGRESS: at 27.59% examples, 507494 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:09,877 gensim.models.word2vec [INFO] PROGRESS: at 28.36% examples, 509191 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:10,881 gensim.models.word2vec [INFO] PROGRESS: at 29.36% examples, 509240 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:11,895 gensim.models.word2vec [INFO] PROGRESS: at 30.10% examples, 510093 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:12,896 gensim.models.word2vec [INFO] PROGRESS: at 31.07% examples, 510284 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:13,906 gensim.models.word2vec [INFO] PROGRESS: at 31.83% examples, 510333 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:14,912 gensim.models.word2vec [INFO] PROGRESS: at 32.75% examples, 510892 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:15,914 gensim.models.word2vec [INFO] PROGRESS: at 33.63% examples, 510922 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:16,921 gensim.models.word2vec [INFO] PROGRESS: at 34.37% examples, 511673 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:17,940 gensim.models.word2vec [INFO] PROGRESS: at 35.37% examples, 511398 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:18,961 gensim.models.word2vec [INFO] PROGRESS: at 36.11% examples, 512006 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:19,961 gensim.models.word2vec [INFO] PROGRESS: at 37.05% examples, 511741 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:20,965 gensim.models.word2vec [INFO] PROGRESS: at 37.71% examples, 509524 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:21,967 gensim.models.word2vec [INFO] PROGRESS: at 38.46% examples, 509951 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:22,971 gensim.models.word2vec [INFO] PROGRESS: at 39.38% examples, 509168 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:23,973 gensim.models.word2vec [INFO] PROGRESS: at 40.13% examples, 509945 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:24,981 gensim.models.word2vec [INFO] PROGRESS: at 41.11% examples, 510059 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:25,981 gensim.models.word2vec [INFO] PROGRESS: at 41.75% examples, 508182 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:26,992 gensim.models.word2vec [INFO] PROGRESS: at 42.59% examples, 508947 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:27,996 gensim.models.word2vec [INFO] PROGRESS: at 43.51% examples, 508557 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:29,005 gensim.models.word2vec [INFO] PROGRESS: at 44.23% examples, 509622 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:30,031 gensim.models.word2vec [INFO] PROGRESS: at 45.22% examples, 509017 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:31,039 gensim.models.word2vec [INFO] PROGRESS: at 46.02% examples, 509814 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:32,046 gensim.models.word2vec [INFO] PROGRESS: at 47.01% examples, 510287 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:33,055 gensim.models.word2vec [INFO] PROGRESS: at 47.81% examples, 510757 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:34,062 gensim.models.word2vec [INFO] PROGRESS: at 48.69% examples, 511047 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:35,066 gensim.models.word2vec [INFO] PROGRESS: at 49.61% examples, 511195 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:36,076 gensim.models.word2vec [INFO] PROGRESS: at 50.38% examples, 512003 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:37,082 gensim.models.word2vec [INFO] PROGRESS: at 51.37% examples, 511925 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:38,082 gensim.models.word2vec [INFO] PROGRESS: at 52.13% examples, 512690 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:39,093 gensim.models.word2vec [INFO] PROGRESS: at 53.12% examples, 512836 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:40,095 gensim.models.word2vec [INFO] PROGRESS: at 53.91% examples, 513228 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:41,100 gensim.models.word2vec [INFO] PROGRESS: at 54.82% examples, 513145 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:42,101 gensim.models.word2vec [INFO] PROGRESS: at 55.69% examples, 513414 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:43,117 gensim.models.word2vec [INFO] PROGRESS: at 56.48% examples, 513986 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:44,122 gensim.models.word2vec [INFO] PROGRESS: at 57.47% examples, 513919 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:45,129 gensim.models.word2vec [INFO] PROGRESS: at 58.16% examples, 513964 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:46,144 gensim.models.word2vec [INFO] PROGRESS: at 59.11% examples, 513680 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:47,144 gensim.models.word2vec [INFO] PROGRESS: at 59.88% examples, 513855 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:48,145 gensim.models.word2vec [INFO] PROGRESS: at 60.80% examples, 513953 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:49,148 gensim.models.word2vec [INFO] PROGRESS: at 61.66% examples, 513952 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:50,154 gensim.models.word2vec [INFO] PROGRESS: at 62.46% examples, 514609 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:51,168 gensim.models.word2vec [INFO] PROGRESS: at 63.39% examples, 514096 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:52,172 gensim.models.word2vec [INFO] PROGRESS: at 64.15% examples, 514608 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:53,184 gensim.models.word2vec [INFO] PROGRESS: at 65.14% examples, 514743 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:54,194 gensim.models.word2vec [INFO] PROGRESS: at 65.91% examples, 514886 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:55,236 gensim.models.word2vec [INFO] PROGRESS: at 66.76% examples, 514213 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:56,240 gensim.models.word2vec [INFO] PROGRESS: at 67.63% examples, 514116 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:57,249 gensim.models.word2vec [INFO] PROGRESS: at 68.38% examples, 514514 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:04:58,252 gensim.models.word2vec [INFO] PROGRESS: at 69.38% examples, 514492 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:04:59,254 gensim.models.word2vec [INFO] PROGRESS: at 70.13% examples, 514930 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:00,268 gensim.models.word2vec [INFO] PROGRESS: at 71.11% examples, 514956 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:01,271 gensim.models.word2vec [INFO] PROGRESS: at 71.89% examples, 515172 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:02,289 gensim.models.word2vec [INFO] PROGRESS: at 72.81% examples, 515099 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:03,289 gensim.models.word2vec [INFO] PROGRESS: at 73.68% examples, 515278 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:04,290 gensim.models.word2vec [INFO] PROGRESS: at 74.48% examples, 515760 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:05,296 gensim.models.word2vec [INFO] PROGRESS: at 75.38% examples, 515191 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:06,300 gensim.models.word2vec [INFO] PROGRESS: at 76.13% examples, 515604 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:07,312 gensim.models.word2vec [INFO] PROGRESS: at 77.12% examples, 515635 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:08,316 gensim.models.word2vec [INFO] PROGRESS: at 77.91% examples, 515857 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:09,328 gensim.models.word2vec [INFO] PROGRESS: at 78.82% examples, 515743 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:10,330 gensim.models.word2vec [INFO] PROGRESS: at 79.67% examples, 515730 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:11,333 gensim.models.word2vec [INFO] PROGRESS: at 80.46% examples, 516160 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:12,342 gensim.models.word2vec [INFO] PROGRESS: at 81.40% examples, 515814 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:13,350 gensim.models.word2vec [INFO] PROGRESS: at 82.15% examples, 516134 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:14,367 gensim.models.word2vec [INFO] PROGRESS: at 83.14% examples, 516160 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:15,389 gensim.models.word2vec [INFO] PROGRESS: at 83.91% examples, 516231 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:16,391 gensim.models.word2vec [INFO] PROGRESS: at 84.84% examples, 516257 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:17,397 gensim.models.word2vec [INFO] PROGRESS: at 85.70% examples, 516325 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:18,398 gensim.models.word2vec [INFO] PROGRESS: at 86.48% examples, 516665 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:19,411 gensim.models.word2vec [INFO] PROGRESS: at 87.46% examples, 516508 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:20,417 gensim.models.word2vec [INFO] PROGRESS: at 88.16% examples, 516656 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:21,420 gensim.models.word2vec [INFO] PROGRESS: at 89.14% examples, 516588 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:22,433 gensim.models.word2vec [INFO] PROGRESS: at 89.92% examples, 516693 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:23,435 gensim.models.word2vec [INFO] PROGRESS: at 90.84% examples, 516684 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:24,441 gensim.models.word2vec [INFO] PROGRESS: at 91.70% examples, 516747 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:25,442 gensim.models.word2vec [INFO] PROGRESS: at 92.47% examples, 516970 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:26,446 gensim.models.word2vec [INFO] PROGRESS: at 93.39% examples, 516544 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:27,452 gensim.models.word2vec [INFO] PROGRESS: at 94.14% examples, 516892 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:28,453 gensim.models.word2vec [INFO] PROGRESS: at 95.12% examples, 516928 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:29,461 gensim.models.word2vec [INFO] PROGRESS: at 95.89% examples, 516990 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:30,464 gensim.models.word2vec [INFO] PROGRESS: at 96.68% examples, 516525 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:31,474 gensim.models.word2vec [INFO] PROGRESS: at 97.59% examples, 516399 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:32,482 gensim.models.word2vec [INFO] PROGRESS: at 98.31% examples, 516671 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:33,485 gensim.models.word2vec [INFO] PROGRESS: at 99.30% examples, 516418 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:34,309 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 15 more threads
+2017-05-01 04:05:34,334 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 14 more threads
+2017-05-01 04:05:34,338 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 13 more threads
+2017-05-01 04:05:34,363 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 12 more threads
+2017-05-01 04:05:34,367 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 11 more threads
+2017-05-01 04:05:34,367 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 10 more threads
+2017-05-01 04:05:34,372 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 9 more threads
+2017-05-01 04:05:34,373 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 8 more threads
+2017-05-01 04:05:34,374 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 7 more threads
+2017-05-01 04:05:34,374 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 6 more threads
+2017-05-01 04:05:34,375 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 5 more threads
+2017-05-01 04:05:34,376 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 4 more threads
+2017-05-01 04:05:34,378 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 3 more threads
+2017-05-01 04:05:34,378 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 2 more threads
+2017-05-01 04:05:34,378 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 1 more threads
+2017-05-01 04:05:34,380 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 0 more threads
+2017-05-01 04:05:34,380 gensim.models.word2vec [INFO] training on 154760650 raw words (61367407 effective words) took 118.7s, 516806 effective words/s
+2017-05-01 04:05:34,381 gensim.models.word2vec [INFO] training model with 16 workers on 42353 vocabulary and 500 features, using sg=0 hs=0 sample=1e-05 negative=2 window=8
+2017-05-01 04:05:35,388 gensim.models.word2vec [INFO] PROGRESS: at 0.89% examples, 487136 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:36,393 gensim.models.word2vec [INFO] PROGRESS: at 1.69% examples, 491433 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:37,393 gensim.models.word2vec [INFO] PROGRESS: at 2.40% examples, 500358 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:38,393 gensim.models.word2vec [INFO] PROGRESS: at 3.25% examples, 480618 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:39,402 gensim.models.word2vec [INFO] PROGRESS: at 3.92% examples, 478920 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:40,408 gensim.models.word2vec [INFO] PROGRESS: at 4.68% examples, 473800 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:41,444 gensim.models.word2vec [INFO] PROGRESS: at 5.48% examples, 466494 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:42,454 gensim.models.word2vec [INFO] PROGRESS: at 6.11% examples, 467291 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:43,455 gensim.models.word2vec [INFO] PROGRESS: at 6.97% examples, 464803 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:44,463 gensim.models.word2vec [INFO] PROGRESS: at 7.72% examples, 465124 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:45,465 gensim.models.word2vec [INFO] PROGRESS: at 8.48% examples, 471581 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:46,469 gensim.models.word2vec [INFO] PROGRESS: at 9.42% examples, 473021 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:47,481 gensim.models.word2vec [INFO] PROGRESS: at 10.15% examples, 477565 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:48,491 gensim.models.word2vec [INFO] PROGRESS: at 11.14% examples, 480500 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:49,521 gensim.models.word2vec [INFO] PROGRESS: at 11.92% examples, 483116 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:50,525 gensim.models.word2vec [INFO] PROGRESS: at 12.85% examples, 485525 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:51,544 gensim.models.word2vec [INFO] PROGRESS: at 13.72% examples, 488094 words/s, in_qsize 30, out_qsize 1
+2017-05-01 04:05:52,548 gensim.models.word2vec [INFO] PROGRESS: at 14.53% examples, 491740 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:53,558 gensim.models.word2vec [INFO] PROGRESS: at 15.49% examples, 491934 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:54,581 gensim.models.word2vec [INFO] PROGRESS: at 16.23% examples, 495996 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:55,606 gensim.models.word2vec [INFO] PROGRESS: at 17.21% examples, 494759 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:56,608 gensim.models.word2vec [INFO] PROGRESS: at 17.97% examples, 496254 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:05:57,617 gensim.models.word2vec [INFO] PROGRESS: at 18.90% examples, 496694 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:58,626 gensim.models.word2vec [INFO] PROGRESS: at 19.75% examples, 498293 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:05:59,644 gensim.models.word2vec [INFO] PROGRESS: at 20.59% examples, 500261 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:00,655 gensim.models.word2vec [INFO] PROGRESS: at 21.37% examples, 496590 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:01,666 gensim.models.word2vec [INFO] PROGRESS: at 22.11% examples, 498118 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:02,676 gensim.models.word2vec [INFO] PROGRESS: at 23.10% examples, 499054 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:03,681 gensim.models.word2vec [INFO] PROGRESS: at 23.88% examples, 500213 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:04,688 gensim.models.word2vec [INFO] PROGRESS: at 24.79% examples, 500635 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:05,694 gensim.models.word2vec [INFO] PROGRESS: at 25.65% examples, 500747 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:06,699 gensim.models.word2vec [INFO] PROGRESS: at 26.43% examples, 502744 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:07,707 gensim.models.word2vec [INFO] PROGRESS: at 27.38% examples, 502113 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:08,712 gensim.models.word2vec [INFO] PROGRESS: at 28.11% examples, 503116 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:09,721 gensim.models.word2vec [INFO] PROGRESS: at 29.08% examples, 503528 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:10,725 gensim.models.word2vec [INFO] PROGRESS: at 29.84% examples, 503802 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:11,737 gensim.models.word2vec [INFO] PROGRESS: at 30.76% examples, 504404 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:12,737 gensim.models.word2vec [INFO] PROGRESS: at 31.61% examples, 504005 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:13,738 gensim.models.word2vec [INFO] PROGRESS: at 32.32% examples, 504830 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:14,739 gensim.models.word2vec [INFO] PROGRESS: at 33.27% examples, 504217 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:15,740 gensim.models.word2vec [INFO] PROGRESS: at 34.02% examples, 504839 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:16,742 gensim.models.word2vec [INFO] PROGRESS: at 34.92% examples, 504495 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:17,749 gensim.models.word2vec [INFO] PROGRESS: at 35.72% examples, 504302 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:18,755 gensim.models.word2vec [INFO] PROGRESS: at 36.50% examples, 505150 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:19,759 gensim.models.word2vec [INFO] PROGRESS: at 37.47% examples, 505173 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:20,761 gensim.models.word2vec [INFO] PROGRESS: at 38.17% examples, 505950 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:21,774 gensim.models.word2vec [INFO] PROGRESS: at 39.14% examples, 505581 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:22,781 gensim.models.word2vec [INFO] PROGRESS: at 39.89% examples, 505795 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:23,799 gensim.models.word2vec [INFO] PROGRESS: at 40.79% examples, 505698 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:24,804 gensim.models.word2vec [INFO] PROGRESS: at 41.66% examples, 505860 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:25,807 gensim.models.word2vec [INFO] PROGRESS: at 42.38% examples, 506371 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:26,815 gensim.models.word2vec [INFO] PROGRESS: at 43.37% examples, 506215 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:27,838 gensim.models.word2vec [INFO] PROGRESS: at 44.11% examples, 506745 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:28,847 gensim.models.word2vec [INFO] PROGRESS: at 45.10% examples, 507089 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:29,857 gensim.models.word2vec [INFO] PROGRESS: at 45.87% examples, 507359 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:30,869 gensim.models.word2vec [INFO] PROGRESS: at 46.75% examples, 507282 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:31,870 gensim.models.word2vec [INFO] PROGRESS: at 47.63% examples, 507376 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:32,871 gensim.models.word2vec [INFO] PROGRESS: at 48.37% examples, 507979 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:33,872 gensim.models.word2vec [INFO] PROGRESS: at 49.36% examples, 507900 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:34,873 gensim.models.word2vec [INFO] PROGRESS: at 50.08% examples, 508121 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:35,876 gensim.models.word2vec [INFO] PROGRESS: at 51.02% examples, 508159 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:36,885 gensim.models.word2vec [INFO] PROGRESS: at 51.81% examples, 508442 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:37,886 gensim.models.word2vec [INFO] PROGRESS: at 52.65% examples, 508590 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:38,889 gensim.models.word2vec [INFO] PROGRESS: at 53.58% examples, 508664 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:39,903 gensim.models.word2vec [INFO] PROGRESS: at 54.31% examples, 509269 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:40,916 gensim.models.word2vec [INFO] PROGRESS: at 55.26% examples, 508633 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:41,929 gensim.models.word2vec [INFO] PROGRESS: at 56.02% examples, 509071 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:42,944 gensim.models.word2vec [INFO] PROGRESS: at 57.00% examples, 509321 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:43,947 gensim.models.word2vec [INFO] PROGRESS: at 57.78% examples, 509354 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:44,958 gensim.models.word2vec [INFO] PROGRESS: at 58.60% examples, 509525 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:45,959 gensim.models.word2vec [INFO] PROGRESS: at 59.53% examples, 509354 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:46,961 gensim.models.word2vec [INFO] PROGRESS: at 60.23% examples, 510030 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:47,964 gensim.models.word2vec [INFO] PROGRESS: at 61.21% examples, 509676 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:48,965 gensim.models.word2vec [INFO] PROGRESS: at 61.99% examples, 510083 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:49,965 gensim.models.word2vec [INFO] PROGRESS: at 62.92% examples, 510000 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:50,969 gensim.models.word2vec [INFO] PROGRESS: at 63.73% examples, 510014 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:51,970 gensim.models.word2vec [INFO] PROGRESS: at 64.52% examples, 510440 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:52,972 gensim.models.word2vec [INFO] PROGRESS: at 65.44% examples, 510085 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:53,974 gensim.models.word2vec [INFO] PROGRESS: at 66.15% examples, 510310 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:06:54,977 gensim.models.word2vec [INFO] PROGRESS: at 67.12% examples, 510337 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:55,979 gensim.models.word2vec [INFO] PROGRESS: at 67.88% examples, 510436 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:56,982 gensim.models.word2vec [INFO] PROGRESS: at 68.76% examples, 510400 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:57,989 gensim.models.word2vec [INFO] PROGRESS: at 69.61% examples, 510163 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:58,994 gensim.models.word2vec [INFO] PROGRESS: at 70.34% examples, 510535 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:06:59,996 gensim.models.word2vec [INFO] PROGRESS: at 71.32% examples, 510280 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:07:01,010 gensim.models.word2vec [INFO] PROGRESS: at 71.83% examples, 508780 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:07:02,012 gensim.models.word2vec [INFO] PROGRESS: at 72.75% examples, 509083 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:07:03,014 gensim.models.word2vec [INFO] PROGRESS: at 73.63% examples, 509074 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:07:04,016 gensim.models.word2vec [INFO] PROGRESS: at 74.37% examples, 509478 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:05,019 gensim.models.word2vec [INFO] PROGRESS: at 75.36% examples, 509445 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:06,021 gensim.models.word2vec [INFO] PROGRESS: at 76.10% examples, 509687 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:07,021 gensim.models.word2vec [INFO] PROGRESS: at 77.03% examples, 509626 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:08,032 gensim.models.word2vec [INFO] PROGRESS: at 77.83% examples, 509912 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:09,038 gensim.models.word2vec [INFO] PROGRESS: at 78.70% examples, 509975 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:10,041 gensim.models.word2vec [INFO] PROGRESS: at 79.59% examples, 509883 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:07:11,041 gensim.models.word2vec [INFO] PROGRESS: at 80.33% examples, 510358 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:12,046 gensim.models.word2vec [INFO] PROGRESS: at 81.27% examples, 509951 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:07:13,066 gensim.models.word2vec [INFO] PROGRESS: at 82.03% examples, 510162 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:14,067 gensim.models.word2vec [INFO] PROGRESS: at 83.01% examples, 510387 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:15,087 gensim.models.word2vec [INFO] PROGRESS: at 83.81% examples, 510568 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:16,097 gensim.models.word2vec [INFO] PROGRESS: at 84.65% examples, 510602 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:07:17,114 gensim.models.word2vec [INFO] PROGRESS: at 85.58% examples, 510555 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:18,125 gensim.models.word2vec [INFO] PROGRESS: at 86.35% examples, 511086 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:19,137 gensim.models.word2vec [INFO] PROGRESS: at 87.36% examples, 511054 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:20,139 gensim.models.word2vec [INFO] PROGRESS: at 88.10% examples, 511362 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:21,139 gensim.models.word2vec [INFO] PROGRESS: at 89.07% examples, 511496 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:22,143 gensim.models.word2vec [INFO] PROGRESS: at 89.83% examples, 511523 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:23,144 gensim.models.word2vec [INFO] PROGRESS: at 90.76% examples, 511772 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:24,155 gensim.models.word2vec [INFO] PROGRESS: at 91.65% examples, 511794 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:25,156 gensim.models.word2vec [INFO] PROGRESS: at 92.44% examples, 512325 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:26,163 gensim.models.word2vec [INFO] PROGRESS: at 93.40% examples, 512136 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:27,171 gensim.models.word2vec [INFO] PROGRESS: at 94.15% examples, 512472 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:07:28,171 gensim.models.word2vec [INFO] PROGRESS: at 95.14% examples, 512583 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:07:29,172 gensim.models.word2vec [INFO] PROGRESS: at 95.91% examples, 512734 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:07:30,180 gensim.models.word2vec [INFO] PROGRESS: at 96.82% examples, 512683 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:31,192 gensim.models.word2vec [INFO] PROGRESS: at 97.56% examples, 511934 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:32,202 gensim.models.word2vec [INFO] PROGRESS: at 98.28% examples, 512267 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:33,204 gensim.models.word2vec [INFO] PROGRESS: at 99.25% examples, 512023 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:34,038 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 15 more threads
+2017-05-01 04:07:34,060 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 14 more threads
+2017-05-01 04:07:34,062 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 13 more threads
+2017-05-01 04:07:34,084 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 12 more threads
+2017-05-01 04:07:34,091 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 11 more threads
+2017-05-01 04:07:34,091 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 10 more threads
+2017-05-01 04:07:34,094 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 9 more threads
+2017-05-01 04:07:34,094 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 8 more threads
+2017-05-01 04:07:34,096 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 7 more threads
+2017-05-01 04:07:34,097 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 6 more threads
+2017-05-01 04:07:34,100 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 5 more threads
+2017-05-01 04:07:34,100 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 4 more threads
+2017-05-01 04:07:34,101 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 3 more threads
+2017-05-01 04:07:34,102 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 2 more threads
+2017-05-01 04:07:34,103 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 1 more threads
+2017-05-01 04:07:34,104 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 0 more threads
+2017-05-01 04:07:34,104 gensim.models.word2vec [INFO] training on 154760650 raw words (61365984 effective words) took 119.7s, 512586 effective words/s
+2017-05-01 04:07:34,105 gensim.models.word2vec [INFO] training model with 16 workers on 42353 vocabulary and 500 features, using sg=0 hs=0 sample=1e-05 negative=2 window=8
+2017-05-01 04:07:35,112 gensim.models.word2vec [INFO] PROGRESS: at 0.91% examples, 495833 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:36,113 gensim.models.word2vec [INFO] PROGRESS: at 1.75% examples, 517713 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:37,113 gensim.models.word2vec [INFO] PROGRESS: at 2.57% examples, 526465 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:38,115 gensim.models.word2vec [INFO] PROGRESS: at 3.49% examples, 515690 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:39,116 gensim.models.word2vec [INFO] PROGRESS: at 4.22% examples, 528276 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:40,117 gensim.models.word2vec [INFO] PROGRESS: at 5.21% examples, 521617 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:41,142 gensim.models.word2vec [INFO] PROGRESS: at 6.01% examples, 525197 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:42,144 gensim.models.word2vec [INFO] PROGRESS: at 6.99% examples, 526205 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:43,152 gensim.models.word2vec [INFO] PROGRESS: at 7.80% examples, 527813 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:44,165 gensim.models.word2vec [INFO] PROGRESS: at 8.69% examples, 528270 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:45,168 gensim.models.word2vec [INFO] PROGRESS: at 9.61% examples, 527572 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:46,172 gensim.models.word2vec [INFO] PROGRESS: at 10.36% examples, 529902 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:07:47,190 gensim.models.word2vec [INFO] PROGRESS: at 11.37% examples, 527896 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:48,199 gensim.models.word2vec [INFO] PROGRESS: at 12.11% examples, 528910 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:49,208 gensim.models.word2vec [INFO] PROGRESS: at 13.11% examples, 528885 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:50,218 gensim.models.word2vec [INFO] PROGRESS: at 13.89% examples, 529121 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:51,223 gensim.models.word2vec [INFO] PROGRESS: at 14.82% examples, 528528 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:52,232 gensim.models.word2vec [INFO] PROGRESS: at 15.69% examples, 528669 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:53,248 gensim.models.word2vec [INFO] PROGRESS: at 16.50% examples, 530092 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:07:54,276 gensim.models.word2vec [INFO] PROGRESS: at 17.49% examples, 528474 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:55,284 gensim.models.word2vec [INFO] PROGRESS: at 18.23% examples, 530934 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:07:56,288 gensim.models.word2vec [INFO] PROGRESS: at 19.22% examples, 528986 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:57,313 gensim.models.word2vec [INFO] PROGRESS: at 20.01% examples, 529377 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:58,315 gensim.models.word2vec [INFO] PROGRESS: at 20.95% examples, 528601 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:07:59,319 gensim.models.word2vec [INFO] PROGRESS: at 21.74% examples, 527646 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:00,329 gensim.models.word2vec [INFO] PROGRESS: at 22.57% examples, 528393 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:01,352 gensim.models.word2vec [INFO] PROGRESS: at 23.38% examples, 524173 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:02,367 gensim.models.word2vec [INFO] PROGRESS: at 24.15% examples, 525168 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:03,371 gensim.models.word2vec [INFO] PROGRESS: at 25.13% examples, 525051 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:04,382 gensim.models.word2vec [INFO] PROGRESS: at 25.91% examples, 525172 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:05,399 gensim.models.word2vec [INFO] PROGRESS: at 26.83% examples, 524576 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:06,402 gensim.models.word2vec [INFO] PROGRESS: at 27.68% examples, 524364 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:07,402 gensim.models.word2vec [INFO] PROGRESS: at 28.45% examples, 525164 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:08,402 gensim.models.word2vec [INFO] PROGRESS: at 29.40% examples, 524078 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:09,418 gensim.models.word2vec [INFO] PROGRESS: at 30.15% examples, 524604 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:10,425 gensim.models.word2vec [INFO] PROGRESS: at 31.12% examples, 524379 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:11,430 gensim.models.word2vec [INFO] PROGRESS: at 31.90% examples, 524582 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:12,430 gensim.models.word2vec [INFO] PROGRESS: at 32.81% examples, 524207 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:13,441 gensim.models.word2vec [INFO] PROGRESS: at 33.65% examples, 523667 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:14,447 gensim.models.word2vec [INFO] PROGRESS: at 34.45% examples, 524643 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:15,457 gensim.models.word2vec [INFO] PROGRESS: at 35.39% examples, 523597 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:16,470 gensim.models.word2vec [INFO] PROGRESS: at 36.15% examples, 524194 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:17,477 gensim.models.word2vec [INFO] PROGRESS: at 37.12% examples, 524005 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:18,479 gensim.models.word2vec [INFO] PROGRESS: at 37.90% examples, 524163 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:19,480 gensim.models.word2vec [INFO] PROGRESS: at 38.78% examples, 523658 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:20,485 gensim.models.word2vec [INFO] PROGRESS: at 39.65% examples, 523337 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:21,489 gensim.models.word2vec [INFO] PROGRESS: at 40.41% examples, 524086 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:22,503 gensim.models.word2vec [INFO] PROGRESS: at 41.38% examples, 523358 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:23,504 gensim.models.word2vec [INFO] PROGRESS: at 42.13% examples, 523869 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:24,507 gensim.models.word2vec [INFO] PROGRESS: at 43.08% examples, 523522 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:25,517 gensim.models.word2vec [INFO] PROGRESS: at 43.83% examples, 523152 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:26,522 gensim.models.word2vec [INFO] PROGRESS: at 44.76% examples, 523407 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:27,528 gensim.models.word2vec [INFO] PROGRESS: at 45.65% examples, 523282 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:28,530 gensim.models.word2vec [INFO] PROGRESS: at 46.41% examples, 523916 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:29,546 gensim.models.word2vec [INFO] PROGRESS: at 47.39% examples, 523278 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:30,552 gensim.models.word2vec [INFO] PROGRESS: at 48.10% examples, 523385 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:31,562 gensim.models.word2vec [INFO] PROGRESS: at 49.03% examples, 522664 words/s, in_qsize 30, out_qsize 1
+2017-05-01 04:08:32,575 gensim.models.word2vec [INFO] PROGRESS: at 49.83% examples, 522889 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:33,577 gensim.models.word2vec [INFO] PROGRESS: at 50.72% examples, 522947 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:34,577 gensim.models.word2vec [INFO] PROGRESS: at 51.60% examples, 522532 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:35,585 gensim.models.word2vec [INFO] PROGRESS: at 52.35% examples, 523103 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:36,589 gensim.models.word2vec [INFO] PROGRESS: at 53.33% examples, 522624 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:37,590 gensim.models.word2vec [INFO] PROGRESS: at 54.04% examples, 522564 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:38,596 gensim.models.word2vec [INFO] PROGRESS: at 55.01% examples, 522572 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:39,601 gensim.models.word2vec [INFO] PROGRESS: at 55.81% examples, 522709 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:40,603 gensim.models.word2vec [INFO] PROGRESS: at 56.66% examples, 522701 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:41,621 gensim.models.word2vec [INFO] PROGRESS: at 57.59% examples, 522448 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:42,629 gensim.models.word2vec [INFO] PROGRESS: at 58.35% examples, 523035 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:43,629 gensim.models.word2vec [INFO] PROGRESS: at 59.32% examples, 522565 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:44,630 gensim.models.word2vec [INFO] PROGRESS: at 60.05% examples, 522654 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:45,640 gensim.models.word2vec [INFO] PROGRESS: at 61.02% examples, 522693 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:46,680 gensim.models.word2vec [INFO] PROGRESS: at 61.83% examples, 522779 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:47,681 gensim.models.word2vec [INFO] PROGRESS: at 62.76% examples, 523000 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:48,693 gensim.models.word2vec [INFO] PROGRESS: at 63.65% examples, 522871 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:49,696 gensim.models.word2vec [INFO] PROGRESS: at 64.42% examples, 523388 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:50,701 gensim.models.word2vec [INFO] PROGRESS: at 65.38% examples, 522970 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:51,715 gensim.models.word2vec [INFO] PROGRESS: at 66.15% examples, 523347 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:52,724 gensim.models.word2vec [INFO] PROGRESS: at 67.14% examples, 523349 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:53,735 gensim.models.word2vec [INFO] PROGRESS: at 67.91% examples, 523411 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:08:54,736 gensim.models.word2vec [INFO] PROGRESS: at 68.83% examples, 523308 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:55,752 gensim.models.word2vec [INFO] PROGRESS: at 69.70% examples, 523303 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:56,763 gensim.models.word2vec [INFO] PROGRESS: at 70.50% examples, 523679 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:57,794 gensim.models.word2vec [INFO] PROGRESS: at 71.49% examples, 523341 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:58,807 gensim.models.word2vec [INFO] PROGRESS: at 72.23% examples, 523996 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:08:59,824 gensim.models.word2vec [INFO] PROGRESS: at 73.21% examples, 523447 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:00,959 gensim.models.word2vec [INFO] PROGRESS: at 73.83% examples, 521624 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:01,961 gensim.models.word2vec [INFO] PROGRESS: at 74.69% examples, 521491 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:02,965 gensim.models.word2vec [INFO] PROGRESS: at 75.58% examples, 521219 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:03,976 gensim.models.word2vec [INFO] PROGRESS: at 76.31% examples, 521538 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:04,977 gensim.models.word2vec [INFO] PROGRESS: at 77.30% examples, 521273 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:05,979 gensim.models.word2vec [INFO] PROGRESS: at 78.04% examples, 521333 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:06,981 gensim.models.word2vec [INFO] PROGRESS: at 79.01% examples, 521448 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:07,982 gensim.models.word2vec [INFO] PROGRESS: at 79.80% examples, 521446 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:08,999 gensim.models.word2vec [INFO] PROGRESS: at 80.65% examples, 521453 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:10,001 gensim.models.word2vec [INFO] PROGRESS: at 81.58% examples, 521373 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:11,007 gensim.models.word2vec [INFO] PROGRESS: at 82.33% examples, 521771 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:12,008 gensim.models.word2vec [INFO] PROGRESS: at 83.30% examples, 521398 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:13,024 gensim.models.word2vec [INFO] PROGRESS: at 84.03% examples, 521384 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:14,026 gensim.models.word2vec [INFO] PROGRESS: at 85.01% examples, 521488 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:15,042 gensim.models.word2vec [INFO] PROGRESS: at 85.80% examples, 521498 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:16,063 gensim.models.word2vec [INFO] PROGRESS: at 86.65% examples, 521449 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:17,077 gensim.models.word2vec [INFO] PROGRESS: at 87.58% examples, 521313 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:18,080 gensim.models.word2vec [INFO] PROGRESS: at 88.33% examples, 521700 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:19,086 gensim.models.word2vec [INFO] PROGRESS: at 89.30% examples, 521368 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:20,092 gensim.models.word2vec [INFO] PROGRESS: at 90.04% examples, 521404 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:21,103 gensim.models.word2vec [INFO] PROGRESS: at 91.01% examples, 521455 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:22,108 gensim.models.word2vec [INFO] PROGRESS: at 91.80% examples, 521512 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:23,120 gensim.models.word2vec [INFO] PROGRESS: at 92.65% examples, 521471 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:24,140 gensim.models.word2vec [INFO] PROGRESS: at 93.58% examples, 521309 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:25,142 gensim.models.word2vec [INFO] PROGRESS: at 94.32% examples, 521638 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:26,153 gensim.models.word2vec [INFO] PROGRESS: at 95.30% examples, 521337 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:27,153 gensim.models.word2vec [INFO] PROGRESS: at 96.03% examples, 521360 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:28,160 gensim.models.word2vec [INFO] PROGRESS: at 97.01% examples, 521428 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:29,164 gensim.models.word2vec [INFO] PROGRESS: at 97.80% examples, 521492 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:30,170 gensim.models.word2vec [INFO] PROGRESS: at 98.62% examples, 521435 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:31,191 gensim.models.word2vec [INFO] PROGRESS: at 99.39% examples, 520321 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:31,892 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 15 more threads
+2017-05-01 04:09:31,900 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 14 more threads
+2017-05-01 04:09:31,905 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 13 more threads
+2017-05-01 04:09:31,927 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 12 more threads
+2017-05-01 04:09:31,936 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 11 more threads
+2017-05-01 04:09:31,936 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 10 more threads
+2017-05-01 04:09:31,938 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 9 more threads
+2017-05-01 04:09:31,940 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 8 more threads
+2017-05-01 04:09:31,941 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 7 more threads
+2017-05-01 04:09:31,942 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 6 more threads
+2017-05-01 04:09:31,944 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 5 more threads
+2017-05-01 04:09:31,945 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 4 more threads
+2017-05-01 04:09:31,946 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 3 more threads
+2017-05-01 04:09:31,948 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 2 more threads
+2017-05-01 04:09:31,948 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 1 more threads
+2017-05-01 04:09:31,950 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 0 more threads
+2017-05-01 04:09:31,950 gensim.models.word2vec [INFO] training on 154760650 raw words (61367085 effective words) took 117.8s, 520767 effective words/s
+2017-05-01 04:09:31,951 gensim.models.word2vec [INFO] training model with 16 workers on 42353 vocabulary and 500 features, using sg=0 hs=0 sample=1e-05 negative=2 window=8
+2017-05-01 04:09:32,964 gensim.models.word2vec [INFO] PROGRESS: at 0.90% examples, 488570 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:33,969 gensim.models.word2vec [INFO] PROGRESS: at 1.73% examples, 505358 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:34,973 gensim.models.word2vec [INFO] PROGRESS: at 2.55% examples, 522902 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:35,983 gensim.models.word2vec [INFO] PROGRESS: at 3.49% examples, 512791 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:37,002 gensim.models.word2vec [INFO] PROGRESS: at 4.23% examples, 525473 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:38,022 gensim.models.word2vec [INFO] PROGRESS: at 5.22% examples, 517954 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:39,036 gensim.models.word2vec [INFO] PROGRESS: at 6.01% examples, 521627 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:40,040 gensim.models.word2vec [INFO] PROGRESS: at 6.96% examples, 520966 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:41,043 gensim.models.word2vec [INFO] PROGRESS: at 7.76% examples, 520270 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:42,069 gensim.models.word2vec [INFO] PROGRESS: at 8.60% examples, 521753 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:43,075 gensim.models.word2vec [INFO] PROGRESS: at 9.56% examples, 520938 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:44,088 gensim.models.word2vec [INFO] PROGRESS: at 10.24% examples, 522293 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:45,092 gensim.models.word2vec [INFO] PROGRESS: at 11.21% examples, 518818 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:46,101 gensim.models.word2vec [INFO] PROGRESS: at 12.00% examples, 520561 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:47,107 gensim.models.word2vec [INFO] PROGRESS: at 12.94% examples, 519907 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:48,111 gensim.models.word2vec [INFO] PROGRESS: at 13.76% examples, 520538 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:49,123 gensim.models.word2vec [INFO] PROGRESS: at 14.61% examples, 522028 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:50,146 gensim.models.word2vec [INFO] PROGRESS: at 15.57% examples, 521418 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:51,148 gensim.models.word2vec [INFO] PROGRESS: at 16.32% examples, 523727 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:52,148 gensim.models.word2vec [INFO] PROGRESS: at 17.32% examples, 522612 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:53,152 gensim.models.word2vec [INFO] PROGRESS: at 18.06% examples, 523063 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:54,160 gensim.models.word2vec [INFO] PROGRESS: at 19.02% examples, 523018 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:55,175 gensim.models.word2vec [INFO] PROGRESS: at 19.83% examples, 523685 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:09:56,190 gensim.models.word2vec [INFO] PROGRESS: at 20.75% examples, 523995 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:57,217 gensim.models.word2vec [INFO] PROGRESS: at 21.64% examples, 523430 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:58,220 gensim.models.word2vec [INFO] PROGRESS: at 22.43% examples, 524989 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:09:59,227 gensim.models.word2vec [INFO] PROGRESS: at 23.39% examples, 523596 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:00,227 gensim.models.word2vec [INFO] PROGRESS: at 24.12% examples, 524327 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:01,232 gensim.models.word2vec [INFO] PROGRESS: at 25.02% examples, 522298 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:02,237 gensim.models.word2vec [INFO] PROGRESS: at 25.81% examples, 522485 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:03,240 gensim.models.word2vec [INFO] PROGRESS: at 26.66% examples, 522467 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:04,241 gensim.models.word2vec [INFO] PROGRESS: at 27.59% examples, 522318 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:05,250 gensim.models.word2vec [INFO] PROGRESS: at 28.36% examples, 523583 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:06,253 gensim.models.word2vec [INFO] PROGRESS: at 29.36% examples, 523214 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:07,263 gensim.models.word2vec [INFO] PROGRESS: at 30.10% examples, 523507 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:08,269 gensim.models.word2vec [INFO] PROGRESS: at 31.04% examples, 522913 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:09,297 gensim.models.word2vec [INFO] PROGRESS: at 31.83% examples, 522911 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:10,315 gensim.models.word2vec [INFO] PROGRESS: at 32.78% examples, 523306 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:11,336 gensim.models.word2vec [INFO] PROGRESS: at 33.65% examples, 522952 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:12,344 gensim.models.word2vec [INFO] PROGRESS: at 34.43% examples, 523743 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:13,355 gensim.models.word2vec [INFO] PROGRESS: at 35.38% examples, 522691 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:14,371 gensim.models.word2vec [INFO] PROGRESS: at 36.11% examples, 522886 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:15,382 gensim.models.word2vec [INFO] PROGRESS: at 37.10% examples, 522891 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:16,383 gensim.models.word2vec [INFO] PROGRESS: at 37.88% examples, 523063 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:17,390 gensim.models.word2vec [INFO] PROGRESS: at 38.79% examples, 522951 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:18,405 gensim.models.word2vec [INFO] PROGRESS: at 39.68% examples, 523036 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:19,405 gensim.models.word2vec [INFO] PROGRESS: at 40.38% examples, 522931 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:20,418 gensim.models.word2vec [INFO] PROGRESS: at 41.37% examples, 522316 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:21,432 gensim.models.word2vec [INFO] PROGRESS: at 42.10% examples, 522618 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:22,442 gensim.models.word2vec [INFO] PROGRESS: at 43.06% examples, 522233 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:23,456 gensim.models.word2vec [INFO] PROGRESS: at 43.83% examples, 522145 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:24,460 gensim.models.word2vec [INFO] PROGRESS: at 44.76% examples, 522441 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:25,482 gensim.models.word2vec [INFO] PROGRESS: at 45.64% examples, 522189 words/s, in_qsize 32, out_qsize 1
+2017-05-01 04:10:26,490 gensim.models.word2vec [INFO] PROGRESS: at 46.43% examples, 522935 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:27,504 gensim.models.word2vec [INFO] PROGRESS: at 47.38% examples, 522223 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:28,523 gensim.models.word2vec [INFO] PROGRESS: at 48.15% examples, 522708 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:29,539 gensim.models.word2vec [INFO] PROGRESS: at 49.14% examples, 522648 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:30,543 gensim.models.word2vec [INFO] PROGRESS: at 49.88% examples, 522386 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:31,556 gensim.models.word2vec [INFO] PROGRESS: at 50.76% examples, 522048 words/s, in_qsize 31, out_qsize 1
+2017-05-01 04:10:32,585 gensim.models.word2vec [INFO] PROGRESS: at 51.65% examples, 521767 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:33,590 gensim.models.word2vec [INFO] PROGRESS: at 52.42% examples, 522399 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:34,599 gensim.models.word2vec [INFO] PROGRESS: at 53.39% examples, 521874 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:35,607 gensim.models.word2vec [INFO] PROGRESS: at 54.15% examples, 522405 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:36,613 gensim.models.word2vec [INFO] PROGRESS: at 55.12% examples, 522255 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:37,620 gensim.models.word2vec [INFO] PROGRESS: at 55.90% examples, 522393 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:38,622 gensim.models.word2vec [INFO] PROGRESS: at 56.81% examples, 522246 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:39,626 gensim.models.word2vec [INFO] PROGRESS: at 57.65% examples, 522000 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:40,636 gensim.models.word2vec [INFO] PROGRESS: at 58.45% examples, 522570 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:41,650 gensim.models.word2vec [INFO] PROGRESS: at 59.40% examples, 522069 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:42,652 gensim.models.word2vec [INFO] PROGRESS: at 60.15% examples, 522404 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:43,654 gensim.models.word2vec [INFO] PROGRESS: at 61.12% examples, 522356 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:44,657 gensim.models.word2vec [INFO] PROGRESS: at 61.89% examples, 522404 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:45,657 gensim.models.word2vec [INFO] PROGRESS: at 62.79% examples, 522236 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:46,662 gensim.models.word2vec [INFO] PROGRESS: at 63.65% examples, 522069 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:47,671 gensim.models.word2vec [INFO] PROGRESS: at 64.43% examples, 522537 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:48,681 gensim.models.word2vec [INFO] PROGRESS: at 65.39% examples, 522051 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:49,684 gensim.models.word2vec [INFO] PROGRESS: at 66.11% examples, 522198 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:50,697 gensim.models.word2vec [INFO] PROGRESS: at 67.06% examples, 521902 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:51,735 gensim.models.word2vec [INFO] PROGRESS: at 67.83% examples, 521695 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:52,749 gensim.models.word2vec [INFO] PROGRESS: at 68.75% examples, 521775 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:53,752 gensim.models.word2vec [INFO] PROGRESS: at 69.64% examples, 521732 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:54,761 gensim.models.word2vec [INFO] PROGRESS: at 70.37% examples, 521891 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:10:55,763 gensim.models.word2vec [INFO] PROGRESS: at 71.36% examples, 521681 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:56,775 gensim.models.word2vec [INFO] PROGRESS: at 72.10% examples, 521816 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:57,778 gensim.models.word2vec [INFO] PROGRESS: at 73.07% examples, 521845 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:58,779 gensim.models.word2vec [INFO] PROGRESS: at 73.85% examples, 521908 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:10:59,781 gensim.models.word2vec [INFO] PROGRESS: at 74.75% examples, 521918 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:00,815 gensim.models.word2vec [INFO] PROGRESS: at 75.65% examples, 521740 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:01,822 gensim.models.word2vec [INFO] PROGRESS: at 76.15% examples, 520272 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:02,824 gensim.models.word2vec [INFO] PROGRESS: at 77.12% examples, 520177 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:03,827 gensim.models.word2vec [INFO] PROGRESS: at 77.87% examples, 520115 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:04,845 gensim.models.word2vec [INFO] PROGRESS: at 78.79% examples, 520063 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:05,855 gensim.models.word2vec [INFO] PROGRESS: at 79.65% examples, 519879 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:06,856 gensim.models.word2vec [INFO] PROGRESS: at 80.38% examples, 520162 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:07,884 gensim.models.word2vec [INFO] PROGRESS: at 81.37% examples, 519781 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:08,892 gensim.models.word2vec [INFO] PROGRESS: at 82.10% examples, 519993 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:09,900 gensim.models.word2vec [INFO] PROGRESS: at 83.05% examples, 519791 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:10,943 gensim.models.word2vec [INFO] PROGRESS: at 83.83% examples, 519663 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:11,967 gensim.models.word2vec [INFO] PROGRESS: at 84.76% examples, 519743 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:12,988 gensim.models.word2vec [INFO] PROGRESS: at 85.65% examples, 519634 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:13,993 gensim.models.word2vec [INFO] PROGRESS: at 86.41% examples, 520015 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:15,023 gensim.models.word2vec [INFO] PROGRESS: at 87.39% examples, 519635 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:16,039 gensim.models.word2vec [INFO] PROGRESS: at 88.15% examples, 519946 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:17,044 gensim.models.word2vec [INFO] PROGRESS: at 89.12% examples, 519928 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:18,046 gensim.models.word2vec [INFO] PROGRESS: at 89.91% examples, 520093 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:19,047 gensim.models.word2vec [INFO] PROGRESS: at 90.81% examples, 519959 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:20,051 gensim.models.word2vec [INFO] PROGRESS: at 91.65% examples, 519837 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:21,054 gensim.models.word2vec [INFO] PROGRESS: at 92.46% examples, 520284 words/s, in_qsize 30, out_qsize 1
+2017-05-01 04:11:22,055 gensim.models.word2vec [INFO] PROGRESS: at 93.38% examples, 519898 words/s, in_qsize 30, out_qsize 1
+2017-05-01 04:11:23,069 gensim.models.word2vec [INFO] PROGRESS: at 94.15% examples, 520195 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:24,082 gensim.models.word2vec [INFO] PROGRESS: at 95.14% examples, 520200 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:25,090 gensim.models.word2vec [INFO] PROGRESS: at 95.91% examples, 520289 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:26,092 gensim.models.word2vec [INFO] PROGRESS: at 96.86% examples, 520354 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:27,092 gensim.models.word2vec [INFO] PROGRESS: at 97.72% examples, 520472 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:28,092 gensim.models.word2vec [INFO] PROGRESS: at 98.52% examples, 520745 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:29,120 gensim.models.word2vec [INFO] PROGRESS: at 99.49% examples, 520481 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:29,690 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 15 more threads
+2017-05-01 04:11:29,713 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 14 more threads
+2017-05-01 04:11:29,718 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 13 more threads
+2017-05-01 04:11:29,734 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 12 more threads
+2017-05-01 04:11:29,743 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 11 more threads
+2017-05-01 04:11:29,745 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 10 more threads
+2017-05-01 04:11:29,747 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 9 more threads
+2017-05-01 04:11:29,749 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 8 more threads
+2017-05-01 04:11:29,750 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 7 more threads
+2017-05-01 04:11:29,751 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 6 more threads
+2017-05-01 04:11:29,751 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 5 more threads
+2017-05-01 04:11:29,752 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 4 more threads
+2017-05-01 04:11:29,753 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 3 more threads
+2017-05-01 04:11:29,755 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 2 more threads
+2017-05-01 04:11:29,756 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 1 more threads
+2017-05-01 04:11:29,756 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 0 more threads
+2017-05-01 04:11:29,756 gensim.models.word2vec [INFO] training on 154760650 raw words (61370762 effective words) took 117.8s, 520969 effective words/s
+2017-05-01 04:11:29,758 gensim.models.word2vec [INFO] training model with 16 workers on 42353 vocabulary and 500 features, using sg=0 hs=0 sample=1e-05 negative=2 window=8
+2017-05-01 04:11:30,763 gensim.models.word2vec [INFO] PROGRESS: at 0.91% examples, 495506 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:31,766 gensim.models.word2vec [INFO] PROGRESS: at 1.61% examples, 458970 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:32,775 gensim.models.word2vec [INFO] PROGRESS: at 2.37% examples, 491775 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:33,778 gensim.models.word2vec [INFO] PROGRESS: at 3.35% examples, 493598 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:34,781 gensim.models.word2vec [INFO] PROGRESS: at 4.04% examples, 495784 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:35,791 gensim.models.word2vec [INFO] PROGRESS: at 5.02% examples, 500718 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:36,792 gensim.models.word2vec [INFO] PROGRESS: at 5.82% examples, 506601 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:37,806 gensim.models.word2vec [INFO] PROGRESS: at 6.70% examples, 508246 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:38,810 gensim.models.word2vec [INFO] PROGRESS: at 7.62% examples, 509816 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:39,818 gensim.models.word2vec [INFO] PROGRESS: at 8.36% examples, 513405 words/s, in_qsize 30, out_qsize 1
+2017-05-01 04:11:40,842 gensim.models.word2vec [INFO] PROGRESS: at 9.37% examples, 512276 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:41,846 gensim.models.word2vec [INFO] PROGRESS: at 10.11% examples, 515195 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:42,856 gensim.models.word2vec [INFO] PROGRESS: at 11.11% examples, 516290 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:43,863 gensim.models.word2vec [INFO] PROGRESS: at 11.91% examples, 518186 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:44,867 gensim.models.word2vec [INFO] PROGRESS: at 12.82% examples, 517561 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:45,874 gensim.models.word2vec [INFO] PROGRESS: at 13.68% examples, 517964 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:46,877 gensim.models.word2vec [INFO] PROGRESS: at 14.45% examples, 519344 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:47,880 gensim.models.word2vec [INFO] PROGRESS: at 15.37% examples, 516809 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:48,885 gensim.models.word2vec [INFO] PROGRESS: at 16.11% examples, 518238 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:49,888 gensim.models.word2vec [INFO] PROGRESS: at 17.10% examples, 518497 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:50,896 gensim.models.word2vec [INFO] PROGRESS: at 17.87% examples, 518936 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:51,911 gensim.models.word2vec [INFO] PROGRESS: at 18.78% examples, 518512 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:52,930 gensim.models.word2vec [INFO] PROGRESS: at 19.64% examples, 517790 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:53,932 gensim.models.word2vec [INFO] PROGRESS: at 20.43% examples, 519753 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:54,944 gensim.models.word2vec [INFO] PROGRESS: at 21.39% examples, 518503 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:55,946 gensim.models.word2vec [INFO] PROGRESS: at 22.15% examples, 520017 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:56,953 gensim.models.word2vec [INFO] PROGRESS: at 23.14% examples, 520156 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:11:57,957 gensim.models.word2vec [INFO] PROGRESS: at 23.92% examples, 520575 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:58,959 gensim.models.word2vec [INFO] PROGRESS: at 24.86% examples, 520687 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:11:59,962 gensim.models.word2vec [INFO] PROGRESS: at 25.72% examples, 520940 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:00,968 gensim.models.word2vec [INFO] PROGRESS: at 26.48% examples, 521456 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:01,981 gensim.models.word2vec [INFO] PROGRESS: at 27.37% examples, 518988 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:02,982 gensim.models.word2vec [INFO] PROGRESS: at 28.10% examples, 519729 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:03,987 gensim.models.word2vec [INFO] PROGRESS: at 29.06% examples, 519307 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:04,994 gensim.models.word2vec [INFO] PROGRESS: at 29.83% examples, 519370 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:05,998 gensim.models.word2vec [INFO] PROGRESS: at 30.76% examples, 519846 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:07,026 gensim.models.word2vec [INFO] PROGRESS: at 31.65% examples, 519462 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:08,027 gensim.models.word2vec [INFO] PROGRESS: at 32.44% examples, 520783 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:09,027 gensim.models.word2vec [INFO] PROGRESS: at 33.39% examples, 519899 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:10,043 gensim.models.word2vec [INFO] PROGRESS: at 34.15% examples, 520681 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:11,056 gensim.models.word2vec [INFO] PROGRESS: at 35.14% examples, 520671 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:12,068 gensim.models.word2vec [INFO] PROGRESS: at 35.91% examples, 520854 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:13,072 gensim.models.word2vec [INFO] PROGRESS: at 36.85% examples, 520863 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:14,082 gensim.models.word2vec [INFO] PROGRESS: at 37.70% examples, 520775 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:15,082 gensim.models.word2vec [INFO] PROGRESS: at 38.50% examples, 521547 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:16,084 gensim.models.word2vec [INFO] PROGRESS: at 39.46% examples, 521124 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:17,085 gensim.models.word2vec [INFO] PROGRESS: at 40.17% examples, 521666 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:18,093 gensim.models.word2vec [INFO] PROGRESS: at 41.15% examples, 521167 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:19,096 gensim.models.word2vec [INFO] PROGRESS: at 41.91% examples, 521184 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:20,099 gensim.models.word2vec [INFO] PROGRESS: at 42.77% examples, 520567 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:21,120 gensim.models.word2vec [INFO] PROGRESS: at 43.65% examples, 520261 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:22,131 gensim.models.word2vec [INFO] PROGRESS: at 44.41% examples, 520910 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:23,162 gensim.models.word2vec [INFO] PROGRESS: at 45.39% examples, 520168 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:24,177 gensim.models.word2vec [INFO] PROGRESS: at 46.15% examples, 520753 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:25,191 gensim.models.word2vec [INFO] PROGRESS: at 47.14% examples, 520756 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:26,215 gensim.models.word2vec [INFO] PROGRESS: at 47.91% examples, 520782 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:27,228 gensim.models.word2vec [INFO] PROGRESS: at 48.85% examples, 520726 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:28,230 gensim.models.word2vec [INFO] PROGRESS: at 49.71% examples, 520870 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:29,231 gensim.models.word2vec [INFO] PROGRESS: at 50.50% examples, 521389 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:30,233 gensim.models.word2vec [INFO] PROGRESS: at 51.47% examples, 521087 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:31,233 gensim.models.word2vec [INFO] PROGRESS: at 52.17% examples, 521303 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:32,237 gensim.models.word2vec [INFO] PROGRESS: at 53.15% examples, 521097 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:33,245 gensim.models.word2vec [INFO] PROGRESS: at 53.92% examples, 521135 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:34,252 gensim.models.word2vec [INFO] PROGRESS: at 54.84% examples, 521052 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:35,257 gensim.models.word2vec [INFO] PROGRESS: at 55.70% examples, 521091 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:36,262 gensim.models.word2vec [INFO] PROGRESS: at 56.50% examples, 521577 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:37,263 gensim.models.word2vec [INFO] PROGRESS: at 57.47% examples, 521356 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:38,266 gensim.models.word2vec [INFO] PROGRESS: at 58.18% examples, 521958 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:39,266 gensim.models.word2vec [INFO] PROGRESS: at 59.18% examples, 521648 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:40,267 gensim.models.word2vec [INFO] PROGRESS: at 59.94% examples, 521649 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:41,280 gensim.models.word2vec [INFO] PROGRESS: at 60.90% examples, 521678 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:42,281 gensim.models.word2vec [INFO] PROGRESS: at 61.73% examples, 521724 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:43,285 gensim.models.word2vec [INFO] PROGRESS: at 62.54% examples, 522169 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:44,296 gensim.models.word2vec [INFO] PROGRESS: at 63.49% examples, 521727 words/s, in_qsize 30, out_qsize 1
+2017-05-01 04:12:45,298 gensim.models.word2vec [INFO] PROGRESS: at 64.23% examples, 522502 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:46,320 gensim.models.word2vec [INFO] PROGRESS: at 65.22% examples, 521931 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:47,328 gensim.models.word2vec [INFO] PROGRESS: at 66.02% examples, 522326 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:48,331 gensim.models.word2vec [INFO] PROGRESS: at 66.99% examples, 522395 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:49,332 gensim.models.word2vec [INFO] PROGRESS: at 67.80% examples, 522583 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:50,358 gensim.models.word2vec [INFO] PROGRESS: at 68.65% examples, 522516 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:51,372 gensim.models.word2vec [INFO] PROGRESS: at 69.59% examples, 522421 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:52,384 gensim.models.word2vec [INFO] PROGRESS: at 70.36% examples, 522911 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:53,410 gensim.models.word2vec [INFO] PROGRESS: at 71.37% examples, 522672 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:54,416 gensim.models.word2vec [INFO] PROGRESS: at 72.11% examples, 522941 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:55,423 gensim.models.word2vec [INFO] PROGRESS: at 73.10% examples, 522968 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:56,425 gensim.models.word2vec [INFO] PROGRESS: at 73.87% examples, 523019 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:57,435 gensim.models.word2vec [INFO] PROGRESS: at 74.79% examples, 522971 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:12:58,436 gensim.models.word2vec [INFO] PROGRESS: at 75.67% examples, 522975 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:12:59,441 gensim.models.word2vec [INFO] PROGRESS: at 76.43% examples, 523303 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:00,447 gensim.models.word2vec [INFO] PROGRESS: at 77.40% examples, 522999 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:13:01,451 gensim.models.word2vec [INFO] PROGRESS: at 78.19% examples, 523429 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:02,469 gensim.models.word2vec [INFO] PROGRESS: at 79.17% examples, 523438 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:03,482 gensim.models.word2vec [INFO] PROGRESS: at 79.93% examples, 523307 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:04,489 gensim.models.word2vec [INFO] PROGRESS: at 80.87% examples, 523291 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:05,509 gensim.models.word2vec [INFO] PROGRESS: at 81.72% examples, 523255 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:06,514 gensim.models.word2vec [INFO] PROGRESS: at 82.54% examples, 523650 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:07,516 gensim.models.word2vec [INFO] PROGRESS: at 83.49% examples, 523358 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:08,518 gensim.models.word2vec [INFO] PROGRESS: at 84.23% examples, 523929 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:09,534 gensim.models.word2vec [INFO] PROGRESS: at 85.23% examples, 523545 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:10,535 gensim.models.word2vec [INFO] PROGRESS: at 86.02% examples, 523871 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:11,539 gensim.models.word2vec [INFO] PROGRESS: at 87.01% examples, 523970 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:12,540 gensim.models.word2vec [INFO] PROGRESS: at 87.79% examples, 523983 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:13:13,548 gensim.models.word2vec [INFO] PROGRESS: at 88.61% examples, 523895 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:13:14,549 gensim.models.word2vec [INFO] PROGRESS: at 89.56% examples, 523743 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:15,550 gensim.models.word2vec [INFO] PROGRESS: at 90.25% examples, 523968 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:16,556 gensim.models.word2vec [INFO] PROGRESS: at 91.21% examples, 523517 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:17,571 gensim.models.word2vec [INFO] PROGRESS: at 92.00% examples, 523663 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:18,574 gensim.models.word2vec [INFO] PROGRESS: at 92.93% examples, 523441 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:13:19,576 gensim.models.word2vec [INFO] PROGRESS: at 93.74% examples, 523406 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:13:20,577 gensim.models.word2vec [INFO] PROGRESS: at 94.52% examples, 523483 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:21,588 gensim.models.word2vec [INFO] PROGRESS: at 95.46% examples, 523145 words/s, in_qsize 32, out_qsize 0
+2017-05-01 04:13:22,600 gensim.models.word2vec [INFO] PROGRESS: at 96.16% examples, 523219 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:23,602 gensim.models.word2vec [INFO] PROGRESS: at 97.14% examples, 523071 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:24,609 gensim.models.word2vec [INFO] PROGRESS: at 97.90% examples, 523078 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:25,621 gensim.models.word2vec [INFO] PROGRESS: at 98.79% examples, 522849 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:26,635 gensim.models.word2vec [INFO] PROGRESS: at 99.64% examples, 522656 words/s, in_qsize 31, out_qsize 0
+2017-05-01 04:13:27,010 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 15 more threads
+2017-05-01 04:13:27,029 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 14 more threads
+2017-05-01 04:13:27,034 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 13 more threads
+2017-05-01 04:13:27,052 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 12 more threads
+2017-05-01 04:13:27,064 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 11 more threads
+2017-05-01 04:13:27,064 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 10 more threads
+2017-05-01 04:13:27,068 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 9 more threads
+2017-05-01 04:13:27,069 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 8 more threads
+2017-05-01 04:13:27,072 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 7 more threads
+2017-05-01 04:13:27,073 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 6 more threads
+2017-05-01 04:13:27,074 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 5 more threads
+2017-05-01 04:13:27,076 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 4 more threads
+2017-05-01 04:13:27,078 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 3 more threads
+2017-05-01 04:13:27,078 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 2 more threads
+2017-05-01 04:13:27,078 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 1 more threads
+2017-05-01 04:13:27,079 gensim.models.word2vec [INFO] worker thread finished; awaiting finish of 0 more threads
+2017-05-01 04:13:27,079 gensim.models.word2vec [INFO] training on 154760650 raw words (61360507 effective words) took 117.3s, 523031 effective words/s
+2017-05-01 04:13:27,079 Patent2Vec [INFO] END 2017-05-01 04:13:27.079667
+2017-05-01 04:13:27,079 Patent2Vec Application [INFO] Total time elapsed: 1188.62273311615
+2017-05-01 04:13:27,080 Patent2Vec [INFO] Evaluating Patent2Vec model
+2017-05-01 04:13:27,150 gensim.models.keyedvectors [INFO] precomputing L2-norms of word weight vectors
+2017-05-01 04:13:28,825 gensim.models.keyedvectors [INFO] capital-common-countries: 86.2% (181/210)
+2017-05-01 04:13:31,031 gensim.models.keyedvectors [INFO] capital-world: 83.6% (214/256)
+2017-05-01 04:13:31,354 gensim.models.keyedvectors [INFO] currency: 7.4% (4/54)
+2017-05-01 04:13:38,452 gensim.models.keyedvectors [INFO] city-in-state: 42.7% (445/1042)
+2017-05-01 04:13:39,141 gensim.models.keyedvectors [INFO] family: 14.4% (13/90)
+2017-05-01 04:13:43,836 gensim.models.keyedvectors [INFO] gram1-adjective-to-adverb: 11.0% (77/702)
+2017-05-01 04:13:46,565 gensim.models.keyedvectors [INFO] gram2-opposite: 11.0% (46/420)
+2017-05-01 04:13:52,005 gensim.models.keyedvectors [INFO] gram3-comparative: 6.6% (50/756)
+2017-05-01 04:13:52,096 gensim.models.keyedvectors [INFO] gram4-superlative: 16.7% (2/12)
+2017-05-01 04:13:52,866 gensim.models.keyedvectors [INFO] gram5-present-participle: 19.1% (21/110)
+2017-05-01 04:13:57,524 gensim.models.keyedvectors [INFO] gram6-nationality-adjective: 11.4% (67/586)
+2017-05-01 04:13:58,406 gensim.models.keyedvectors [INFO] gram7-past-tense: 4.5% (5/110)
+2017-05-01 04:13:58,617 gensim.models.keyedvectors [INFO] gram8-plural: 100.0% (30/30)
+2017-05-01 04:13:59,001 gensim.models.keyedvectors [INFO] gram9-plural-verbs: 0.0% (0/56)
+2017-05-01 04:13:59,001 gensim.models.keyedvectors [INFO] total: 26.0% (1155/4434)
+2017-05-01 04:13:59,003 Patent2Vec [INFO] Total: 4434,  Correct: 26.05%,  Incorrect: 73.95%
+2017-05-01 04:13:59,004 Patent2Vec [INFO] Saving Patent2Vec model
+2017-05-01 04:13:59,018 gensim.utils [INFO] saving Doc2Vec object under /users/cborse/patent2vec/output/models/patent2vec.p2v, separately None
+2017-05-01 04:13:59,018 gensim.utils [INFO] not storing attribute syn0norm
+2017-05-01 04:13:59,018 gensim.utils [INFO] storing np array 'syn0' to /users/cborse/patent2vec/output/models/patent2vec.p2v.wv.syn0.npy
+2017-05-01 04:13:59,800 gensim.utils [INFO] not storing attribute cum_table
+2017-05-01 04:13:59,800 gensim.utils [INFO] storing np array 'syn1neg' to /users/cborse/patent2vec/output/models/patent2vec.p2v.syn1neg.npy
+2017-05-01 04:14:01,587 gensim.utils [INFO] saved /users/cborse/patent2vec/output/models/patent2vec.p2v
+2017-05-01 04:14:01,593 Patent2Vec [INFO] Saving document embeddings
+2017-05-01 04:14:16,035 Patent2Vec [INFO] Predicting document embeddings
+2017-05-01 04:14:17,283 Patent2Vec [INFO] Cleaning temporary generated data
+2017-05-01 04:14:17,440 Patent2Vec Application [INFO] Check quality of Patent2Vec model
+2017-05-01 04:14:17,440 Patent2Vec Application [INFO] Top matches for test document: /users/cborse/patent2vec/data/benchmark/clustering/20_newsgroups_preprocessed/rec.autos/103325
+2017-05-01 04:14:17,451 gensim.models.doc2vec [INFO] precomputing L2-norms of doc weight vectors
+2017-05-01 04:14:17,823 Patent2Vec Application [INFO] /users/cborse/patent2vec/data/benchmark/clustering/20_newsgroups_preprocessed/rec.autos/103325		0.683564305305481
+2017-05-01 04:14:17,823 Patent2Vec Application [INFO] /users/cborse/patent2vec/data/benchmark/clustering/20_newsgroups_preprocessed/rec.autos/103231		0.634538471698761
+2017-05-01 04:14:17,823 Patent2Vec Application [INFO] /users/cborse/patent2vec/data/benchmark/clustering/20_newsgroups_preprocessed/rec.autos/103769		0.5925619602203369
+2017-05-01 04:14:17,823 Patent2Vec Application [INFO] /users/cborse/patent2vec/data/benchmark/clustering/20_newsgroups_preprocessed/rec.autos/103410		0.39176684617996216
+2017-05-01 04:14:17,823 Patent2Vec Application [INFO] /users/cborse/patent2vec/data/benchmark/clustering/20_newsgroups_preprocessed/rec.autos/103100		0.38222742080688477
+2017-05-01 04:14:17,823 Patent2Vec Application [INFO] /users/cborse/patent2vec/data/benchmark/clustering/20_newsgroups_preprocessed/rec.autos/103385		0.3308618664741516
+2017-05-01 04:14:17,823 Patent2Vec Application [INFO] /users/cborse/patent2vec/data/benchmark/clustering/20_newsgroups_preprocessed/rec.autos/103198		0.32755136489868164
+2017-05-01 04:14:17,824 Patent2Vec Application [INFO] /users/cborse/patent2vec/data/benchmark/clustering/20_newsgroups_preprocessed/rec.autos/103084		0.3092969059944153
+2017-05-01 04:14:17,824 Patent2Vec Application [INFO] /users/cborse/patent2vec/data/benchmark/clustering/20_newsgroups_preprocessed/rec.autos/103761		0.2343253195285797
+2017-05-01 04:14:17,824 Patent2Vec Application [INFO] /users/cborse/patent2vec/data/benchmark/clustering/20_newsgroups_preprocessed/rec.autos/102792		0.23271669447422028
+2017-05-01 04:14:17,824 Cleanup [INFO] Removed: /users/cborse/patent2vec/output/sample/train
+2017-05-01 04:14:17,864 Cleanup [INFO] Removed: /users/cborse/patent2vec/output/sample/test
+2017-05-01 04:14:17,864 Cleanup [INFO] Removed: /users/cborse/patent2vec/output/docvecs/patents.map.doctag_syn0
+2017-05-01 04:14:17,881 Cleanup [INFO] Removed: /users/cborse/patent2vec/output/docvecs/patents.map.doctag_syn0_lockf
+2017-05-01 04:14:17,889 Cleanup [INFO] Removed: /users/cborse/patent2vec/output/docvecs/patents.map.doctag_syn0norm
