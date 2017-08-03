@@ -1,2 +1,2 @@
-# InteractiveTextRetrieval
-Interactive Text Retrieval Application.
+# Patent2Vec
+Patent2Vec Model Application.
