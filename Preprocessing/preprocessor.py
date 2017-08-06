@@ -443,6 +443,7 @@ class PatentDocument(object):
                     content += "\n"
         except ValueError as e:
             # If content is not in JSON format, then read it in raw format
+            handle.seek(0)
             content = handle.read()
         
         return content
